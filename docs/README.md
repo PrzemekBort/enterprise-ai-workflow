@@ -1,50 +1,46 @@
-# Cloud / AI Learning System
+# Cloud / AI Learning System v2
 
-Ten katalog służy do prowadzenia 18–24-miesięcznego planu rozwoju w kierunku **Cloud / AI Engineer**.
+System do prowadzenia 18–24-miesięcznego planu rozwoju w kierunku **Cloud / AI Engineer**.
 
-## Główne zasady
+## Model pracy
 
-1. **Jedno źródło prawdy:** `ROADMAP.md`
-2. **Jeden główny projekt:** `enterprise-ai-workflow`
-3. **Każdy nowy temat musi trafić do projektu**
-4. **Maksymalnie 3 cele na tydzień**
-5. **Nie zmieniaj roadmapy impulsywnie**
-6. **Nowe technologie bez bieżącego zastosowania trafiają do `LATER.md`**
-7. **AI ma przyspieszać feedback, nie zastępować Twojej pierwszej próby**
-8. **Consistency > intensity**
+Każdy etap jest oceniany w czterech warstwach:
+
+**Learn → Build → Knowledge Check → Definition of Done**
+
+- **Learn** — rozumiesz pojęcia.
+- **Build** — użyłeś ich w projekcie.
+- **Knowledge Check** — potrafisz wyjaśnić / zrobić bez prowadzenia AI.
+- **Definition of Done** — etap można zamknąć.
 
 ## Pliki
+- `ROADMAP.md` — źródło prawdy dla kolejności i zakresu rozwoju
+- `PROJECT_REQUIREMENTS.md` — źródło prawdy dla zachowania i wymagań produktu
+- `DECISIONS.md` — źródło prawdy dla podjętych decyzji architektonicznych
+- `SPRINT.md` — źródło prawdy dla aktualnej pracy
+- `PROGRESS.md` — bieżący stan rozwoju
+- `LEARNING_LOG.md` — log sesji
+- `COMPETENCY_MATRIX.md` — kompetencje 0–5 z dowodami
+- `REVIEWS.md` — weekly, monthly i gate review
+- `LATER.md` — parking lot / kontrola scope creep
+- `AI_RULES.md` — zasady Engineer / Tutor / Reviewer
+- `CAREER_CHECKPOINTS.md` — checkpointy związane z rynkiem pracy i certyfikatami
 
-- `ROADMAP.md` — główny plan 24-miesięczny
-- `PROGRESS.md` — bieżący stan i następne kroki
-- `LEARNING_LOG.md` — krótki log każdej sesji
-- `COMPETENCY_MATRIX.md` — samoocena kompetencji 0–5
-- `SPRINT.md` — bieżący dwutygodniowy sprint
-- `REVIEWS.md` — weekly / monthly / gate review
-- `DECISIONS.md` — decyzje techniczne i architektoniczne
-- `LATER.md` — rzeczy ciekawe, ale nie na teraz
-- `AI_RULES.md` — zasady pracy z Engineer / Tutor / Reviewer
 
-## Rytm pracy
+## Rytm
+- każda sesja: `LEARNING_LOG.md`
+- co tydzień: Weekly Review + maks. 3 cele
+- co 2 tygodnie: zamknięcie sprintu
+- co miesiąc: Monthly Review + competency matrix
+- po etapie: Gate Review
 
-### Każda sesja
-- pracujesz nad bieżącym celem,
-- zapisujesz 3–5 minut notatek w `LEARNING_LOG.md`,
-- aktualizujesz `PROGRESS.md` tylko jeśli coś faktycznie się zmieniło.
-
-### Co tydzień
-- wykonujesz Weekly Review,
-- wybierasz maks. 3 cele na kolejny tydzień.
-
-### Co 2 tygodnie
-- zamykasz sprint,
-- definiujesz następny.
-
-### Co miesiąc
-- robisz Monthly Review,
-- aktualizujesz macierz kompetencji.
-
-### Co 3 miesiące
-- robisz Gate Review,
-- sprawdzasz Definition of Done etapu,
-- dopiero potem przechodzisz dalej.
+## Zasady
+1. `ROADMAP.md` jest źródłem prawdy dla rozwoju i kolejności nauki.
+2. `PROJECT_REQUIREMENTS.md` jest źródłem prawdy dla wymagań produktu.
+3. `DECISIONS.md` opisuje świadomie podjęte decyzje architektoniczne.
+4. `SPRINT.md` określa aktualny zakres pracy.
+5. Agenci nie zmieniają `ROADMAP.md` ani `PROJECT_REQUIREMENTS.md` bez wyraźnej zgody.
+6. Nowa technologia musi rozwiązywać konkretny problem.
+7. Jeśli nie rozwiązuje — trafia do `LATER.md`.
+8. Nie próbujesz osiągać perfekcji przed przejściem dalej.
+9. Luki nieblokujące zapisujesz i wracasz do nich później.

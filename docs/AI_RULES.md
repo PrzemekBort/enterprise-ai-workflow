@@ -23,6 +23,7 @@ AI skraca czas od błędu do feedbacku, ale **nie skraca czasu od problemu do mo
 - podejmować decyzji architektonicznych za mnie
 - naprawiać każdego błędu bez wcześniejszej analizy
 - zmieniać ROADMAP.md
+- zmieniać PROJECT_REQUIREMENTS.md bez wyraźnej zgody
 
 ## Instrukcja
 
@@ -59,6 +60,8 @@ PROJECT LEARNING RULES
 8. Prefer tests that expose a bug before proposing a fix.
 
 9. Never modify ROADMAP.md without explicit approval.
+
+10. Treat PROJECT_REQUIREMENTS.md as read-only unless the developer explicitly approves a requirements change.
 ```
 
 ---
@@ -98,6 +101,15 @@ Regularnie sprawdzaj, czy potrafię wyjaśnić temat własnymi słowami.
 ---
 
 # 3. Reviewer / Architect
+
+## Przed review
+Reviewer powinien najpierw przeczytać:
+- `PROJECT_REQUIREMENTS.md`
+- aktualny etap w `ROADMAP.md`
+- `SPRINT.md`
+- odpowiednie wpisy w `DECISIONS.md`
+
+Ocenia implementację względem **aktualnej wersji produktu i etapu nauki**, a nie względem finalnej architektury V8.
 
 ## Cel
 Krytycznie oceniać moje rozwiązania.

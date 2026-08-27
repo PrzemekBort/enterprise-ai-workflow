@@ -1,33 +1,41 @@
-# Learning Log
+# Learning Log v2
 
-> Po każdej sesji 3–5 minut. Bez eseju.
+> Po każdej sesji 3–5 minut.
 
 ## Szablon
 
 ### YYYY-MM-DD — X h
 
-**Zrobiłem:**
-- 
+**Etap / sprint:**
+-
 
-**Nauczyłem się:**
-- 
+**Learn — czego się dowiedziałem:**
+-
+
+**Build — co zrobiłem w projekcie:**
+-
+
+**Knowledge Check — co potrafię teraz bez AI:**
+-
 
 **Problem / luka:**
-- 
+-
+
+**Czy luka blokuje etap?**
+- Tak / Nie
 
 **Pomoc AI:**
-- 
+-
 
 **Co zrobiłem samodzielnie:**
-- 
+-
 
 **Następny krok:**
-- 
+-
 
-**Confidence po sesji (0–5):**
+**Confidence (0–5):**
 - temat: X/5
 
 ---
 
 ## Log
-

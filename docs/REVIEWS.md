@@ -1,114 +1,122 @@
-# Reviews
+# Reviews v2
 
 # Weekly Review
 
-## Szablon
-
 ### Tydzień: YYYY-WXX
 
+## Execution
 **Planowane cele:**
-1. 
-2. 
-3. 
+1.
+2.
+3.
 
 **Wykonane:**
-- 
+-
 
 **Niewykonane:**
-- 
+-
 
-**Co mnie blokowało:**
-- 
+## Learn / Build / Knowledge
+**Czego się nauczyłem:**
+-
 
-**Czy utknąłem > 2–3 h na jednym problemie?**
-- 
+**Co zbudowałem:**
+-
 
-**Czy pojawił się scope creep?**
-- 
+**Co potrafię teraz zrobić bez AI:**
+-
 
-**Czy delegowałem za dużo AI?**
-- 
+## Ryzyka
+- Utknąłem > 2–3 h:
+- Scope creep:
+- Za dużo delegacji do AI:
+- Plan był zbyt szeroki:
 
-**Największa luka wiedzy:**
-- 
-
-**3 cele na kolejny tydzień:**
-1. 
-2. 
-3. 
+## Następny tydzień — maks. 3 cele
+1.
+2.
+3.
 
 ---
 
 # Monthly Review
 
-## Szablon
-
 ### Miesiąc: YYYY-MM
 
-**Postęp względem roadmapy:**
-- 
+## Roadmap
+- Aktualny etap:
+- Learn:
+- Build:
+- Knowledge Check:
+- DoD:
 
-**Największy wzrost kompetencji:**
-- 
+## Kompetencje
+- Największy wzrost:
+- Tematy powierzchowne:
+- Tematy blokujące zbyt długo:
+- Co potrafię debugować:
 
-**Tematy zbyt powierzchowne:**
-- 
-
-**Tematy, na których spędzam za dużo czasu:**
-- 
-
-**Scope creep:**
-- 
-
-**Regularność:**
+## Regularność
 - planowane godziny:
 - rzeczywiste godziny:
-- liczba aktywnych tygodni:
+- aktywne tygodnie:
+- tygodnie 0h:
 
-**AI usage review:**
-- co AI robiło dobrze:
-- co delegowałem za dużo:
-- czego powinienem częściej próbować sam:
+## AI usage
+- gdzie AI pomogło:
+- gdzie zrobiło za dużo:
+- co następnym razem zrobię sam:
 
-**Aktualizacja competency matrix:**
-- 
+## Scope
+- nowe technologie:
+- potrzebne / niepotrzebne:
+- co trafia do `LATER.md`:
 
-**Korekta następnego miesiąca:**
-- 
+## Decyzja
+- [ ] kontynuuję
+- [ ] ograniczam zakres
+- [ ] wracam do jednej luki
+- [ ] świadomie koryguję roadmapę
 
 ---
 
-# Gate Review — co 3 miesiące
-
-## Szablon
+# Gate Review — po etapie
 
 ### Etap:
 ### Data:
 
-**Definition of Done spełnione?**
-- [ ] Tak
-- [ ] Nie
+## Learn
+- [ ] kluczowe pojęcia są zrozumiane
 
-**Najważniejsze dowody:**
-- 
+## Build
+- [ ] wymagane elementy istnieją w projekcie
 
-**Knowledge check:**
+## Knowledge Check
 - [ ] potrafię wyjaśnić kluczowe pojęcia
-- [ ] potrafię zbudować rozwiązanie bez kopiowania z AI
+- [ ] potrafię wykonać podstawowe zadania bez prowadzenia AI
 - [ ] potrafię debugować typowe problemy
-- [ ] potrafię obronić decyzje techniczne
+- [ ] potrafię obronić główne decyzje techniczne
 
-**Luki blokujące przejście dalej:**
-- 
+## Definition of Done
+- [ ] wszystkie kryteria blokujące są spełnione
 
-**Luki nieblokujące — do revisitu:**
-- 
+## Luki blokujące
+-
 
-**Decyzja:**
+## Luki nieblokujące / revisit
+-
+
+## Czy siedzę w etapie za długo?
+-
+
+## Czy próbuję osiągnąć perfekcję?
+-
+
+## Decyzja
 - [ ] przechodzę dalej
-- [ ] potrzebuję 1 dodatkowego tygodnia
-- [ ] potrzebuję 2 dodatkowych tygodni
+- [ ] +1 tydzień
+- [ ] +2 tygodnie
 - [ ] większa korekta roadmapy
 
-**Uzasadnienie:**
+## Uzasadnienie
 -

@@ -1,4 +1,4 @@
-# Roadmap — Cloud / AI Engineer
+# Roadmap — Cloud / AI Engineer v2
 
 ## Cel końcowy
 
@@ -7,7 +7,6 @@ Po 18–24 miesiącach:
 **Cloud / AI Engineer z doświadczeniem w budowie aplikacji biznesowych, automatyzacji procesów, integracji LLM, Azure, identity/security i SQL.**
 
 Docelowy stack:
-
 - C# / .NET / ASP.NET Core
 - Python / FastAPI
 - SQL / PostgreSQL / Azure SQL
@@ -23,42 +22,64 @@ Docelowy stack:
 - tool calling / agents
 - AI evaluation / AI security
 
+## Jak czytać roadmapę
+
+Każdy etap ma cztery poziomy:
+
+1. **Learn** — pojęcia, które trzeba rozumieć.
+2. **Build** — rzeczy, które trzeba zastosować w projekcie.
+3. **Knowledge Check** — rzeczy, które trzeba umieć wyjaśnić lub zrobić bez prowadzenia AI.
+4. **Definition of Done** — warunek przejścia do kolejnego etapu.
+
+Nie trzeba znać każdego tematu ekspercko. Celem jest przejście od rozumienia → praktyki → samodzielności.
+
 ---
 
 # ETAP 0 — miesiąc 1
 ## Środowisko i fundamenty
 
-### Zakres
+### Learn
+- [ ] Git: branch, commit, merge, rebase, stash
+- [ ] podstawy terminala i Linux/bash
+- [ ] HTTP: request/response, methods, status codes, headers
+- [ ] REST i JSON na poziomie praktycznym
+
+### Setup
 - [ ] Git / GitHub
 - [ ] Visual Studio / VS Code
 - [ ] .NET SDK
 - [ ] Python
 - [ ] Docker
 - [ ] PostgreSQL
-- [ ] podstawy Linux/bash
-- [ ] HTTP / REST / JSON
 
-### Git praktycznie
-- [ ] clone
-- [ ] branch / switch
-- [ ] add / commit / push / pull
-- [ ] merge
-- [ ] rebase
-- [ ] stash
+### Build
+- [ ] utwórz repo `enterprise-ai-workflow`
+- [ ] wykonaj pierwszy branch → commit → merge
+- [ ] uruchom prosty kontener Docker
+- [ ] uruchom lokalnie PostgreSQL
+- [ ] wykonaj prosty request HTTP do testowego API
+
+### Knowledge Check
+- [ ] potrafię wyjaśnić różnicę między commit, branch i merge
+- [ ] potrafię wyjaśnić request vs response
+- [ ] rozumiem podstawowe metody HTTP i status codes
+- [ ] potrafię poruszać się po terminalu i katalogach
 
 ### Definition of Done
-- [ ] repo `enterprise-ai-workflow` istnieje
-- [ ] lokalne środowisko działa
-- [ ] umiem samodzielnie pracować na branchach i commitach
+- [ ] środowisko działa
+- [ ] repo istnieje i ma poprawny workflow Git
+- [ ] Docker działa
+- [ ] PostgreSQL działa lokalnie
+- [ ] potrafię wykonać podstawowe operacje bez prowadzenia krok po kroku przez AI
 
 ---
 
 # ETAP 1 — miesiące 2–4
 ## C# / .NET Backend
 
-### Zakres
+### Learn
 - [ ] ASP.NET Core
-- [ ] REST
+- [ ] REST API design
 - [ ] Controllers / Minimal APIs
 - [ ] dependency injection
 - [ ] configuration
@@ -68,45 +89,66 @@ Docelowy stack:
 - [ ] validation
 - [ ] EF Core
 - [ ] migrations
-- [ ] authentication
-- [ ] authorization
 - [ ] unit tests
 - [ ] integration tests
+- [ ] podstawy authentication / authorization — koncepcyjnie
 
-### Projekt
+### Build
 **Enterprise Workflow API**
 
-Model:
-- Users
-- Requests
-- Documents
-- Tasks
-- Approvals
-- AuditEvents
+Core concepts required in V1:
+- User
+- Request
+- AuditEvent
 
-Przykładowe endpointy:
-- POST /requests
-- GET /requests
-- GET /requests/{id}
-- POST /requests/{id}/approve
-- POST /requests/{id}/reject
-- GET /requests/{id}/history
+Potential concept:
+- Approval — jeśli wynika z Twojego modelu domenowego
+
+Later versions:
+- Document
+- Task — dopiero gdy pojawi się realny use case
+
+Endpointy:
+- [ ] POST /requests
+- [ ] GET /requests
+- [ ] GET /requests/{id}
+- [ ] POST /requests/{id}/approve
+- [ ] POST /requests/{id}/reject
+- [ ] GET /requests/{id}/history
+
+Technicznie:
+- [ ] PostgreSQL
+- [ ] EF Core + migrations
+- [ ] validation
+- [ ] global error handling
+- [ ] logging
+- [ ] podstawowe unit tests
+- [ ] integration tests
+- [ ] Docker Compose dla API + DB
+
+### Knowledge Check
+- [ ] potrafię wyjaśnić lifetime: transient/scoped/singleton
+- [ ] rozumiem rolę middleware
+- [ ] potrafię wyjaśnić DbContext i migrations
+- [ ] rozumiem różnicę unit vs integration test
+- [ ] potrafię samodzielnie zdiagnozować typowy błąd połączenia API ↔ DB
 
 ### Definition of Done
-- [ ] API działa
-- [ ] PostgreSQL działa
-- [ ] EF Core + migrations działają
-- [ ] walidacja i obsługa błędów są wdrożone
-- [ ] podstawowe testy działają
-- [ ] system uruchamia się przez Docker Compose
+- [ ] API działa end-to-end lokalnie
+- [ ] baza działa i migracje są powtarzalne
+- [ ] walidacja i obsługa błędów działają
+- [ ] testy obejmują krytyczne ścieżki
+- [ ] `docker compose up` uruchamia system
 - [ ] potrafię wyjaśnić architekturę bez pomocy AI
+
+> Pełne OAuth/OIDC i Entra zostają na późniejszy etap. Tutaj wystarczy rozumieć podstawy auth.
 
 ---
 
 # ETAP 2 — miesiące 5–6
 ## Python jako język AI
 
-### Zakres
+### Learn
 - [ ] typing
 - [ ] dataclasses
 - [ ] Pydantic
@@ -117,155 +159,215 @@ Przykładowe endpointy:
 - [ ] environment variables
 - [ ] FastAPI
 
-### Projekt
+### Build
 **Document Service**
+- [ ] system potrafi przyjąć dokument powiązany z requestem
+- [ ] można pobrać informacje o dokumencie
+- [ ] można zainicjować przetwarzanie dokumentu
+- [ ] status i wynik przetwarzania są dostępne
+- [ ] ekstrakcja tekstu działa bez AI
+- [ ] metadata / wynik są zapisywane lub referencjonowane
+- [ ] komunikacja z głównym backendem działa
 
-Endpointy:
-- POST /documents
-- GET /documents/{id}
-- POST /documents/{id}/process
+> Kształt API, sync vs async oraz sposób komunikacji .NET ↔ Python pozostają Twoją decyzją projektową.
 
-Pipeline:
-dokument → ekstrakcja tekstu → storage / SQL
+### Knowledge Check
+- [ ] rozumiem różnicę między sync i async w Pythonie
+- [ ] potrafię wyjaśnić rolę Pydantic
+- [ ] potrafię napisać prosty endpoint FastAPI bez kopiowania gotowca
+- [ ] rozumiem podział odpowiedzialności .NET vs Python
 
 ### Definition of Done
 - [ ] Python service działa niezależnie
-- [ ] komunikuje się z backendem lub bazą
+- [ ] komunikuje się z systemem
 - [ ] ma testy
-- [ ] rozumiem odpowiedzialność .NET vs Python
+- [ ] ma logging i konfigurację przez env
+- [ ] potrafię samodzielnie dodać nowy prosty endpoint
 
 ---
 
 # ETAP 3 — miesiące 7–9
-## Azure + Docker + CI/CD
+## Azure App Platform + Docker + CI/CD
 
-### Priorytet Azure
+### Learn
+Priorytet podstawowy:
 - [ ] Azure Container Apps
 - [ ] Azure SQL
 - [ ] Storage Account
 - [ ] Key Vault
 - [ ] Managed Identity
-- [ ] Entra ID
+- [ ] Entra ID — integracja aplikacji
 - [ ] Application Insights
 - [ ] Azure Monitor
-- [ ] Service Bus
-- [ ] API Management
 
-### DevOps
+Wprowadzenie, bez głębokiego wdrażania:
+- [ ] Service Bus — po co istnieje
+- [ ] API Management — po co istnieje
+
+DevOps:
 - [ ] Dockerfile
 - [ ] Docker Compose
 - [ ] GitHub Actions
-- [ ] build
-- [ ] test
-- [ ] Docker image
-- [ ] deploy Azure
+- [ ] build/test/deploy pipeline
+
+### Build
+- [ ] wdroż .NET API do Azure
+- [ ] wdroż Python service
+- [ ] podłącz Azure SQL
+- [ ] użyj Storage Account
+- [ ] sekrety przenieś do Key Vault
+- [ ] użyj Managed Identity tam, gdzie ma sens
+- [ ] włącz Application Insights
+- [ ] zbuduj CI/CD w GitHub Actions
+
+### Knowledge Check
+- [ ] potrafię uzasadnić Container Apps vs App Service vs Functions w prostym scenariuszu
+- [ ] rozumiem Managed Identity vs secret
+- [ ] potrafię wyjaśnić, gdzie powinny znajdować się sekrety
+- [ ] potrafię prześledzić pipeline od push do deploymentu
+- [ ] rozumiem podstawowy przepływ logów i telemetry
 
 ### Definition of Done
-- [ ] .NET API działa w Azure
-- [ ] Python service działa w Azure
-- [ ] baza działa
+- [ ] system działa w Azure
 - [ ] deployment jest automatyczny
 - [ ] sekrety nie są w repo
 - [ ] monitoring działa
-- [ ] podstawowe security działa
+- [ ] aplikacja ma podstawowe identity/security
+- [ ] potrafię odtworzyć deployment bez instrukcji krok po kroku
 
 ---
 
 # ETAP 4 — miesiące 10–12
 ## LLM Engineering
 
-### Zakres
+### Learn
 - [ ] LLM API
 - [ ] tokens
 - [ ] context window
 - [ ] system/user messages
 - [ ] structured output
-- [ ] function calling
-- [ ] embeddings
+- [ ] function calling — podstawy
+- [ ] embeddings — intuicja, bez pełnego RAG
 - [ ] temperature
 - [ ] hallucinations
 - [ ] retries
 - [ ] rate limits
 - [ ] cost tracking
 
-### Projekt
+### Build
 **AI Document Processing**
-
-Pipeline:
-PDF → text extraction → LLM → structured JSON → validation → SQL
-
-### Obowiązkowo
+- [ ] PDF → text extraction
+- [ ] LLM → structured JSON
 - [ ] schema validation
 - [ ] business rules
 - [ ] retry
 - [ ] manual review
 - [ ] audit log
-- [ ] błędy modelu są obsługiwane
+- [ ] obsługa błędnych odpowiedzi modelu
+- [ ] pomiar kosztu i latency
+
+### Knowledge Check
+- [ ] potrafię wyjaśnić, dlaczego LLM nie jest źródłem prawdy
+- [ ] rozumiem structured output vs zwykły tekst
+- [ ] potrafię wskazać failure modes
+- [ ] rozumiem podstawową różnicę prompting vs validation
 
 ### Definition of Done
-- [ ] LLM zwraca dane w kontrolowanym formacie
-- [ ] model nie jest traktowany jako źródło prawdy
-- [ ] potrafię wyjaśnić failure modes
-- [ ] mierzę koszt i latency
+- [ ] system wyciąga dane z dokumentów do kontrolowanego schematu
+- [ ] błędy modelu są obsługiwane
+- [ ] istnieje manual review
+- [ ] koszt i latency są mierzone
+- [ ] potrafię wyjaśnić cały pipeline
 
 ---
 
 # ETAP 5 — miesiące 13–15
 ## RAG
 
-### Zakres
-- [ ] embeddings
+### Learn
+- [ ] embeddings — praktycznie
 - [ ] vector search
 - [ ] chunking
 - [ ] metadata
 - [ ] similarity
 - [ ] hybrid search
 - [ ] reranking
+- [ ] retrieval evaluation
 
-### Projekt
+### Build
 **Enterprise Knowledge Assistant**
+- [ ] ingestion dokumentów
+- [ ] chunking
+- [ ] embeddings
+- [ ] vector store
+- [ ] retrieval
+- [ ] odpowiedź LLM
+- [ ] cytowanie źródeł
+- [ ] prosty zestaw testowy retrievalu
 
-Pipeline:
-Documents → Chunking → Embeddings → Vector DB → Retrieval → Context → LLM → Answer
+### Knowledge Check
+- [ ] potrafię wyjaśnić wpływ chunk size
+- [ ] rozumiem retrieval vs generation
+- [ ] potrafię wskazać, czy problem leży w retrievalu czy modelu
+- [ ] potrafię wyjaśnić po co reranking
 
 ### Definition of Done
-- [ ] odpowiedzi zawierają źródła
-- [ ] potrafię mierzyć jakość retrievalu
-- [ ] rozumiem wpływ chunkingu
-- [ ] potrafię odróżnić problem retrievalu od problemu generacji
+- [ ] odpowiedzi mają źródła
+- [ ] retrieval jest mierzalny
+- [ ] potrafię porównać co najmniej dwa warianty chunkingu
+- [ ] system nie polega wyłącznie na „wydaje się, że działa”
 
 ---
 
 # ETAP 6 — miesiące 16–18
-## Agents + Tool Calling
+## Tool Calling + Agents + Messaging
 
-### Zakres
+### Learn
 - [ ] tool calling
-- [ ] bezpieczne wykonywanie akcji
 - [ ] allowlist narzędzi
 - [ ] walidacja parametrów
 - [ ] audit log
 - [ ] kontrola uprawnień
+- [ ] excessive agency
+- [ ] Service Bus praktycznie
+- [ ] queues/topics
+- [ ] retries
+- [ ] dead-letter queue
+- [ ] idempotency
+- [ ] eventual consistency
 
-### Projekt
-Przykład:
-LLM → get_user_requests() → SQL → analiza → odpowiedź
+### Build
+- [ ] agent odczytuje dane przez bezpieczne tools
+- [ ] agent wykonuje wybraną akcję workflow
+- [ ] akcje są audytowane
+- [ ] mock workflow engine działa na potrzeby projektu
+- [ ] Service Bus został przećwiczony praktycznie:
+  - [ ] w głównym projekcie, jeśli istnieje uzasadniony use case
+  - [ ] **albo** w małym laboratorium producer → queue → consumer → retry → DLQ
+- [ ] w `DECISIONS.md` zapisano, dlaczego messaging został lub nie został użyty w głównym systemie
 
-Później:
-LLM → check_request() → validate_documents() → start_workflow() → audit_log()
+### Knowledge Check
+- [ ] potrafię uzasadnić REST vs queue
+- [ ] rozumiem idempotency
+- [ ] rozumiem DLQ
+- [ ] potrafię wyjaśnić ryzyko excessive agency
+- [ ] potrafię wskazać, które akcje wymagają dodatkowego potwierdzenia
 
 ### Definition of Done
-- [ ] agent może bezpiecznie wywołać wybrane narzędzia
-- [ ] każda akcja jest audytowana
+- [ ] agent bezpiecznie wywołuje wybrane narzędzia
+- [ ] akcje są walidowane i audytowane
 - [ ] krytyczne akcje są kontrolowane
-- [ ] potrafię wyjaśnić ryzyko excessive agency
+- [ ] potrafię praktycznie użyć Service Bus i wyjaśnić retry / DLQ
+- [ ] decyzja o użyciu lub nieużyciu messagingu w głównym projekcie jest uzasadniona
+- [ ] failure handling jest udokumentowany
 
 ---
 
 # ETAP 7 — miesiące 19–21
-## Security + Production AI
+## Identity + Security + Production AI
 
-### Identity
+### Learn
+Identity:
 - [ ] OAuth 2.0
 - [ ] OpenID Connect
 - [ ] access tokens
@@ -276,7 +378,7 @@ LLM → check_request() → validate_documents() → start_workflow() → audit_
 - [ ] service principals
 - [ ] managed identities
 
-### AI Security
+AI Security:
 - [ ] prompt injection
 - [ ] indirect prompt injection
 - [ ] data exfiltration
@@ -284,19 +386,37 @@ LLM → check_request() → validate_documents() → start_workflow() → audit_
 - [ ] excessive agency
 - [ ] sensitive data exposure
 - [ ] output validation
+- [ ] threat modeling — podstawy
+
+### Build
+- [ ] Entra authentication dla użytkownika
+- [ ] authorization po rolach/scopes
+- [ ] RAG respektuje uprawnienia
+- [ ] narzędzia sprawdzają uprawnienia niezależnie od LLM
+- [ ] prosty threat model
+- [ ] testy negatywne security
+
+### Knowledge Check
+- [ ] potrafię wyjaśnić OAuth2 vs OIDC
+- [ ] potrafię wyjaśnić access token vs ID token
+- [ ] rozumiem zasadę least privilege
+- [ ] potrafię wskazać typowy prompt injection flow
+- [ ] potrafię opisać security boundary systemu
 
 ### Definition of Done
-- [ ] RAG respektuje uprawnienia użytkownika
-- [ ] API ma poprawną autoryzację
+- [ ] użytkownik widzi tylko dane, do których ma dostęp
+- [ ] RAG respektuje ACL/permissions
+- [ ] tools nie ufają modelowi jako źródłu autoryzacji
 - [ ] sekrety i identity są poprawnie obsługiwane
-- [ ] istnieje prosty threat model
+- [ ] istnieje threat model i testy security
 
 ---
 
 # ETAP 8 — miesiące 22–24
-## Production + rekrutacja
+## Production Hardening + Rekrutacja
 
-### Observability
+### Learn
+Observability:
 - [ ] logs
 - [ ] traces
 - [ ] metrics
@@ -305,29 +425,48 @@ LLM → check_request() → validate_documents() → start_workflow() → audit_
 - [ ] latency
 - [ ] cost
 
-### Reliability
-- [ ] retries
+Reliability:
+- [ ] retries — production patterns
 - [ ] timeout
 - [ ] circuit breaker
-- [ ] queues
+- [ ] queues — production usage
 - [ ] caching
 - [ ] fallback
 
-### AI Evaluation
+AI Evaluation:
 - [ ] test dataset
 - [ ] expected answers
 - [ ] retrieval evaluation
 - [ ] hallucination checks
 - [ ] regression tests
 
-### IaC
+IaC:
 - [ ] Bicep
 - [ ] opcjonalnie Terraform
+
+### Build
+- [ ] observability end-to-end
+- [ ] dashboard / podstawowe alerty
+- [ ] retry/timeout/fallback tam, gdzie potrzebne
+- [ ] AI regression tests
+- [ ] Bicep dla kluczowych zasobów Azure
+- [ ] dokumentacja architektury
+- [ ] README projektu pod portfolio
+- [ ] przykładowy ADR dla ważnej decyzji
+
+### Knowledge Check
+- [ ] potrafię prześledzić request end-to-end
+- [ ] potrafię zdiagnozować awarię na podstawie logów/metryk
+- [ ] potrafię obronić kluczowe decyzje architektoniczne
+- [ ] potrafię wyjaśnić trade-offy koszt / niezawodność / złożoność
+- [ ] potrafię przejść techniczny walkthrough projektu
 
 ### Definition of Done
 - [ ] system działa end-to-end
 - [ ] deployment jest powtarzalny
 - [ ] security jest opisane
 - [ ] monitoring działa
-- [ ] istnieje dokumentacja architektury
-- [ ] potrafię obronić decyzje projektowe na rozmowie technicznej
+- [ ] reliability patterns są użyte celowo
+- [ ] AI evaluation jest zautomatyzowane na podstawowym poziomie
+- [ ] istnieje dokumentacja architektury i portfolio-ready README
+- [ ] potrafię obronić system na rozmowie technicznej

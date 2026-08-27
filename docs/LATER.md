@@ -7,7 +7,7 @@ Zasada:
 
 ## Technologie
 - Kubernetes
-- Terraform
+- Terraform — później opcjonalnie; nie wprowadzać przed etapem IaC bez potrzeby
 - Redis
 - Dapr
 - Kafka

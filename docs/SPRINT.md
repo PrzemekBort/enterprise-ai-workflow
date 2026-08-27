@@ -1,4 +1,4 @@
-# Current Sprint
+# Current Sprint v2
 
 ## Sprint
 Sprint 01
@@ -7,51 +7,66 @@ Sprint 01
 Start:
 End:
 
+## Powiązany etap roadmapy
+-
+
+## Current project version
+-
+
 ## Sprint goal
-Jedno zdanie opisujące wynik sprintu.
+-
 
-## Maksymalnie 3 cele
+## Learn — maks. 3 tematy
+- [ ]
+- [ ]
+- [ ]
 
-1. [ ] 
-2. [ ] 
-3. [ ] 
+## Build — maks. 3 rezultaty
+1. [ ]
+2. [ ]
+3. [ ]
 
-## Definition of Done
-- [ ] 
-- [ ] 
-- [ ] 
+## Knowledge Check
+- [ ] potrafię wyjaśnić:
+- [ ] potrafię zrobić samodzielnie:
+- [ ] potrafię zdebugować:
+
+## Sprint Definition of Done
+- [ ]
+- [ ]
+- [ ]
 
 ## Nie robimy w tym sprincie
-- 
-- 
+-
+
+## Parking Lot
+-
 
 ## Blockers
-- 
+-
 
-## AI usage plan
+## Stuck timer
+Jeżeli jeden problem przekracza 2–3 h:
+- [ ] zapisałem lukę
+- [ ] użyłem Tutora do diagnostyki
+- [ ] zdecydowałem: pogłębić teraz / revisit
 
+## AI usage
 ### Engineer
-- 
-
+-
 ### Tutor
-- 
-
+-
 ### Reviewer
-- 
+-
 
-## Sprint retrospective
-
-### Co dowiozłem?
-- 
-
-### Czego się nauczyłem?
-- 
-
-### Co mnie blokowało?
-- 
-
-### Czy za dużo delegowałem AI?
-- 
-
-### Co poprawić w następnym sprincie?
-- 
+# Retrospective
+## Dowiezione
+-
+## Czego się nauczyłem
+-
+## Co nadal umiem tylko z pomocą
+-
+## Scope creep
+-
+## Co przechodzi dalej
+-
