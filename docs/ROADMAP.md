@@ -1,35 +1,35 @@
-# Roadmap — Cloud / AI Engineer v2
+# Roadmapa — Inżynier chmury / AI v2
 
 ## Cel końcowy
 
 Po 18–24 miesiącach:
 
-**Cloud / AI Engineer z doświadczeniem w budowie aplikacji biznesowych, automatyzacji procesów, integracji LLM, Azure, identity/security i SQL.**
+**Inżynier chmury / AI z doświadczeniem w budowie aplikacji biznesowych, automatyzacji procesów, integracji LLM, Azure, tożsamości/bezpieczeństwie i SQL.**
 
-Docelowy stack:
+Docelowy stos technologiczny:
 - C# / .NET / ASP.NET Core
 - Python / FastAPI
 - SQL / PostgreSQL / Azure SQL
 - Azure Container Apps / Functions / Storage / Key Vault
-- Entra ID / Managed Identity / RBAC
+- Entra ID / Tożsamość zarządzana / RBAC
 - Docker / Docker Compose
 - GitHub Actions / CI/CD
 - Bicep
 - Service Bus
 - Application Insights / Azure Monitor
-- LLM APIs / Azure OpenAI
-- RAG / vector search
-- tool calling / agents
-- AI evaluation / AI security
+- API LLM / Azure OpenAI
+- RAG / wyszukiwanie wektorowe
+- wywoływanie narzędzi / agenci
+- ocena AI / bezpieczeństwo AI
 
 ## Jak czytać roadmapę
 
 Każdy etap ma cztery poziomy:
 
-1. **Learn** — pojęcia, które trzeba rozumieć.
-2. **Build** — rzeczy, które trzeba zastosować w projekcie.
-3. **Knowledge Check** — rzeczy, które trzeba umieć wyjaśnić lub zrobić bez prowadzenia AI.
-4. **Definition of Done** — warunek przejścia do kolejnego etapu.
+1. **Nauka** — pojęcia, które trzeba rozumieć.
+2. **Budowanie** — rzeczy, które trzeba zastosować w projekcie.
+3. **Sprawdzenie wiedzy** — rzeczy, które trzeba umieć wyjaśnić lub zrobić bez prowadzenia AI.
+4. **Kryteria ukończenia** — warunek przejścia do kolejnego etapu.
 
 Nie trzeba znać każdego tematu ekspercko. Celem jest przejście od rozumienia → praktyki → samodzielności.
 
@@ -38,13 +38,13 @@ Nie trzeba znać każdego tematu ekspercko. Celem jest przejście od rozumienia 
 # ETAP 0 — miesiąc 1
 ## Środowisko i fundamenty
 
-### Learn
-- [ ] Git: branch, commit, merge, rebase, stash
+### Nauka
+- [ ] Git: gałąź, commit, scalanie, rebase, schowek
 - [ ] podstawy terminala i Linux/bash
-- [ ] HTTP: request/response, methods, status codes, headers
+- [ ] HTTP: żądanie/odpowiedź, metody, kody stanu, nagłówki
 - [ ] REST i JSON na poziomie praktycznym
 
-### Setup
+### Konfiguracja
 - [ ] Git / GitHub
 - [ ] Visual Studio / VS Code
 - [ ] .NET SDK
@@ -52,22 +52,22 @@ Nie trzeba znać każdego tematu ekspercko. Celem jest przejście od rozumienia 
 - [ ] Docker
 - [ ] PostgreSQL
 
-### Build
+### Budowanie
 - [ ] utwórz repo `enterprise-ai-workflow`
-- [ ] wykonaj pierwszy branch → commit → merge
+- [ ] wykonaj pierwszą gałąź → commit → scalenie
 - [ ] uruchom prosty kontener Docker
 - [ ] uruchom lokalnie PostgreSQL
-- [ ] wykonaj prosty request HTTP do testowego API
+- [ ] wykonaj proste żądanie HTTP do testowego API
 
-### Knowledge Check
-- [ ] potrafię wyjaśnić różnicę między commit, branch i merge
-- [ ] potrafię wyjaśnić request vs response
-- [ ] rozumiem podstawowe metody HTTP i status codes
+### Sprawdzenie wiedzy
+- [ ] potrafię wyjaśnić różnicę między commitem, gałęzią i scaleniem
+- [ ] potrafię wyjaśnić żądanie a odpowiedź
+- [ ] rozumiem podstawowe metody HTTP i kody stanu
 - [ ] potrafię poruszać się po terminalu i katalogach
 
-### Definition of Done
+### Kryteria ukończenia
 - [ ] środowisko działa
-- [ ] repo istnieje i ma poprawny workflow Git
+- [ ] repozytorium istnieje i ma poprawny przepływ pracy Git
 - [ ] Docker działa
 - [ ] PostgreSQL działa lokalnie
 - [ ] potrafię wykonać podstawowe operacje bez prowadzenia krok po kroku przez AI
@@ -75,38 +75,38 @@ Nie trzeba znać każdego tematu ekspercko. Celem jest przejście od rozumienia 
 ---
 
 # ETAP 1 — miesiące 2–4
-## C# / .NET Backend
+## Zaplecze C# / .NET
 
-### Learn
+### Nauka
 - [ ] ASP.NET Core
-- [ ] REST API design
-- [ ] Controllers / Minimal APIs
-- [ ] dependency injection
-- [ ] configuration
+- [ ] projektowanie REST API
+- [ ] kontrolery / minimalne API
+- [ ] wstrzykiwanie zależności
+- [ ] konfiguracja
 - [ ] middleware
-- [ ] logging
-- [ ] error handling
-- [ ] validation
+- [ ] rejestrowanie zdarzeń
+- [ ] obsługa błędów
+- [ ] walidacja
 - [ ] EF Core
-- [ ] migrations
-- [ ] unit tests
-- [ ] integration tests
-- [ ] podstawy authentication / authorization — koncepcyjnie
+- [ ] migracje
+- [ ] testy jednostkowe
+- [ ] testy integracyjne
+- [ ] podstawy uwierzytelniania / autoryzacji — koncepcyjnie
 
-### Build
-**Enterprise Workflow API**
+### Budowanie
+**API korporacyjnego przepływu pracy**
 
-Core concepts required in V1:
-- User
-- Request
-- AuditEvent
+Główne pojęcia wymagane w V1:
+- Użytkownik
+- Wniosek
+- Zdarzenie audytowe
 
-Potential concept:
-- Approval — jeśli wynika z Twojego modelu domenowego
+Potencjalne pojęcie:
+- Zatwierdzenie — jeśli wynika z Twojego modelu domenowego
 
-Later versions:
-- Document
-- Task — dopiero gdy pojawi się realny use case
+Późniejsze wersje:
+- Dokument
+- Zadanie — dopiero gdy pojawi się rzeczywisty przypadek użycia
 
 Endpointy:
 - [ ] POST /requests
@@ -118,84 +118,84 @@ Endpointy:
 
 Technicznie:
 - [ ] PostgreSQL
-- [ ] EF Core + migrations
-- [ ] validation
-- [ ] global error handling
-- [ ] logging
-- [ ] podstawowe unit tests
-- [ ] integration tests
+- [ ] EF Core + migracje
+- [ ] walidacja
+- [ ] globalna obsługa błędów
+- [ ] rejestrowanie zdarzeń
+- [ ] podstawowe testy jednostkowe
+- [ ] testy integracyjne
 - [ ] Docker Compose dla API + DB
 
-### Knowledge Check
-- [ ] potrafię wyjaśnić lifetime: transient/scoped/singleton
+### Sprawdzenie wiedzy
+- [ ] potrafię wyjaśnić czasy życia: przejściowy/o określonym zakresie/pojedynczy
 - [ ] rozumiem rolę middleware
-- [ ] potrafię wyjaśnić DbContext i migrations
-- [ ] rozumiem różnicę unit vs integration test
+- [ ] potrafię wyjaśnić DbContext i migracje
+- [ ] rozumiem różnicę między testem jednostkowym a integracyjnym
 - [ ] potrafię samodzielnie zdiagnozować typowy błąd połączenia API ↔ DB
 
-### Definition of Done
-- [ ] API działa end-to-end lokalnie
+### Kryteria ukończenia
+- [ ] API działa lokalnie od początku do końca
 - [ ] baza działa i migracje są powtarzalne
 - [ ] walidacja i obsługa błędów działają
 - [ ] testy obejmują krytyczne ścieżki
 - [ ] `docker compose up` uruchamia system
 - [ ] potrafię wyjaśnić architekturę bez pomocy AI
 
-> Pełne OAuth/OIDC i Entra zostają na późniejszy etap. Tutaj wystarczy rozumieć podstawy auth.
+> Pełne OAuth/OIDC i Entra zostają na późniejszy etap. Tutaj wystarczy rozumieć podstawy uwierzytelniania i autoryzacji.
 
 ---
 
 # ETAP 2 — miesiące 5–6
 ## Python jako język AI
 
-### Learn
-- [ ] typing
-- [ ] dataclasses
+### Nauka
+- [ ] typowanie
+- [ ] klasy danych
 - [ ] Pydantic
-- [ ] async
+- [ ] programowanie asynchroniczne
 - [ ] requests/httpx
 - [ ] pytest
-- [ ] logging
-- [ ] environment variables
+- [ ] rejestrowanie zdarzeń
+- [ ] zmienne środowiskowe
 - [ ] FastAPI
 
-### Build
-**Document Service**
-- [ ] system potrafi przyjąć dokument powiązany z requestem
+### Budowanie
+**Usługa dokumentów**
+- [ ] system potrafi przyjąć dokument powiązany z wnioskiem
 - [ ] można pobrać informacje o dokumencie
 - [ ] można zainicjować przetwarzanie dokumentu
 - [ ] status i wynik przetwarzania są dostępne
 - [ ] ekstrakcja tekstu działa bez AI
-- [ ] metadata / wynik są zapisywane lub referencjonowane
-- [ ] komunikacja z głównym backendem działa
+- [ ] metadane / wynik są zapisywane lub wskazywane przez odwołanie
+- [ ] komunikacja z głównym zapleczem działa
 
-> Kształt API, sync vs async oraz sposób komunikacji .NET ↔ Python pozostają Twoją decyzją projektową.
+> Kształt API, przetwarzanie synchroniczne lub asynchroniczne oraz sposób komunikacji .NET ↔ Python pozostają Twoją decyzją projektową.
 
-### Knowledge Check
-- [ ] rozumiem różnicę między sync i async w Pythonie
+### Sprawdzenie wiedzy
+- [ ] rozumiem różnicę między kodem synchronicznym i asynchronicznym w Pythonie
 - [ ] potrafię wyjaśnić rolę Pydantic
 - [ ] potrafię napisać prosty endpoint FastAPI bez kopiowania gotowca
 - [ ] rozumiem podział odpowiedzialności .NET vs Python
 
-### Definition of Done
-- [ ] Python service działa niezależnie
+### Kryteria ukończenia
+- [ ] usługa Python działa niezależnie
 - [ ] komunikuje się z systemem
 - [ ] ma testy
-- [ ] ma logging i konfigurację przez env
+- [ ] ma rejestrowanie zdarzeń i konfigurację przez zmienne środowiskowe
 - [ ] potrafię samodzielnie dodać nowy prosty endpoint
 
 ---
 
 # ETAP 3 — miesiące 7–9
-## Azure App Platform + Docker + CI/CD
+## Platforma aplikacyjna Azure + Docker + CI/CD
 
-### Learn
+### Nauka
 Priorytet podstawowy:
 - [ ] Azure Container Apps
 - [ ] Azure SQL
-- [ ] Storage Account
+- [ ] Konto magazynu Azure
 - [ ] Key Vault
-- [ ] Managed Identity
+- [ ] Tożsamość zarządzana
 - [ ] Entra ID — integracja aplikacji
 - [ ] Application Insights
 - [ ] Azure Monitor
@@ -208,265 +208,265 @@ DevOps:
 - [ ] Dockerfile
 - [ ] Docker Compose
 - [ ] GitHub Actions
-- [ ] build/test/deploy pipeline
+- [ ] potok budowania/testowania/wdrażania
 
-### Build
+### Budowanie
 - [ ] wdroż .NET API do Azure
-- [ ] wdroż Python service
+- [ ] wdroż usługę Python
 - [ ] podłącz Azure SQL
-- [ ] użyj Storage Account
+- [ ] użyj konta magazynu Azure
 - [ ] sekrety przenieś do Key Vault
-- [ ] użyj Managed Identity tam, gdzie ma sens
+- [ ] użyj tożsamości zarządzanej tam, gdzie ma sens
 - [ ] włącz Application Insights
 - [ ] zbuduj CI/CD w GitHub Actions
 
-### Knowledge Check
-- [ ] potrafię uzasadnić Container Apps vs App Service vs Functions w prostym scenariuszu
-- [ ] rozumiem Managed Identity vs secret
+### Sprawdzenie wiedzy
+- [ ] potrafię uzasadnić wybór Container Apps, App Service lub Functions w prostym scenariuszu
+- [ ] rozumiem różnicę między tożsamością zarządzaną a sekretem
 - [ ] potrafię wyjaśnić, gdzie powinny znajdować się sekrety
-- [ ] potrafię prześledzić pipeline od push do deploymentu
-- [ ] rozumiem podstawowy przepływ logów i telemetry
+- [ ] potrafię prześledzić potok od wypchnięcia zmian do wdrożenia
+- [ ] rozumiem podstawowy przepływ logów i telemetrii
 
-### Definition of Done
+### Kryteria ukończenia
 - [ ] system działa w Azure
-- [ ] deployment jest automatyczny
+- [ ] wdrożenie jest automatyczne
 - [ ] sekrety nie są w repo
-- [ ] monitoring działa
-- [ ] aplikacja ma podstawowe identity/security
-- [ ] potrafię odtworzyć deployment bez instrukcji krok po kroku
+- [ ] monitorowanie działa
+- [ ] aplikacja ma podstawową obsługę tożsamości/bezpieczeństwa
+- [ ] potrafię odtworzyć wdrożenie bez instrukcji krok po kroku
 
 ---
 
 # ETAP 4 — miesiące 10–12
-## LLM Engineering
+## Inżynieria LLM
 
-### Learn
+### Nauka
 - [ ] LLM API
-- [ ] tokens
-- [ ] context window
-- [ ] system/user messages
-- [ ] structured output
-- [ ] function calling — podstawy
-- [ ] embeddings — intuicja, bez pełnego RAG
-- [ ] temperature
-- [ ] hallucinations
-- [ ] retries
-- [ ] rate limits
-- [ ] cost tracking
+- [ ] tokeny
+- [ ] okno kontekstowe
+- [ ] komunikaty systemowe/użytkownika
+- [ ] ustrukturyzowane dane wyjściowe
+- [ ] wywoływanie funkcji — podstawy
+- [ ] osadzenia — intuicja, bez pełnego RAG
+- [ ] temperatura
+- [ ] halucynacje
+- [ ] ponowienia
+- [ ] limity częstotliwości
+- [ ] śledzenie kosztów
 
-### Build
-**AI Document Processing**
-- [ ] PDF → text extraction
-- [ ] LLM → structured JSON
-- [ ] schema validation
-- [ ] business rules
-- [ ] retry
-- [ ] manual review
-- [ ] audit log
+### Budowanie
+**Przetwarzanie dokumentów przez AI**
+- [ ] PDF → ekstrakcja tekstu
+- [ ] LLM → ustrukturyzowany JSON
+- [ ] walidacja schematu
+- [ ] reguły biznesowe
+- [ ] ponowienie
+- [ ] ręczny przegląd
+- [ ] dziennik audytu
 - [ ] obsługa błędnych odpowiedzi modelu
-- [ ] pomiar kosztu i latency
+- [ ] pomiar kosztu i opóźnienia
 
-### Knowledge Check
+### Sprawdzenie wiedzy
 - [ ] potrafię wyjaśnić, dlaczego LLM nie jest źródłem prawdy
-- [ ] rozumiem structured output vs zwykły tekst
-- [ ] potrafię wskazać failure modes
-- [ ] rozumiem podstawową różnicę prompting vs validation
+- [ ] rozumiem różnicę między ustrukturyzowanymi danymi wyjściowymi a zwykłym tekstem
+- [ ] potrafię wskazać tryby awarii
+- [ ] rozumiem podstawową różnicę między tworzeniem promptów a walidacją
 
-### Definition of Done
+### Kryteria ukończenia
 - [ ] system wyciąga dane z dokumentów do kontrolowanego schematu
 - [ ] błędy modelu są obsługiwane
-- [ ] istnieje manual review
-- [ ] koszt i latency są mierzone
-- [ ] potrafię wyjaśnić cały pipeline
+- [ ] istnieje ręczny przegląd
+- [ ] koszt i opóźnienie są mierzone
+- [ ] potrafię wyjaśnić cały potok
 
 ---
 
 # ETAP 5 — miesiące 13–15
 ## RAG
 
-### Learn
-- [ ] embeddings — praktycznie
-- [ ] vector search
-- [ ] chunking
-- [ ] metadata
-- [ ] similarity
-- [ ] hybrid search
-- [ ] reranking
-- [ ] retrieval evaluation
+### Nauka
+- [ ] osadzenia — praktycznie
+- [ ] wyszukiwanie wektorowe
+- [ ] dzielenie na fragmenty
+- [ ] metadane
+- [ ] podobieństwo
+- [ ] wyszukiwanie hybrydowe
+- [ ] ponowne szeregowanie wyników
+- [ ] ocena wyszukiwania
 
-### Build
-**Enterprise Knowledge Assistant**
-- [ ] ingestion dokumentów
-- [ ] chunking
-- [ ] embeddings
-- [ ] vector store
-- [ ] retrieval
+### Budowanie
+**Asystent wiedzy przedsiębiorstwa**
+- [ ] wprowadzanie dokumentów
+- [ ] dzielenie na fragmenty
+- [ ] osadzenia
+- [ ] magazyn wektorowy
+- [ ] wyszukiwanie
 - [ ] odpowiedź LLM
 - [ ] cytowanie źródeł
-- [ ] prosty zestaw testowy retrievalu
+- [ ] prosty zestaw testowy wyszukiwania
 
-### Knowledge Check
-- [ ] potrafię wyjaśnić wpływ chunk size
-- [ ] rozumiem retrieval vs generation
-- [ ] potrafię wskazać, czy problem leży w retrievalu czy modelu
-- [ ] potrafię wyjaśnić po co reranking
+### Sprawdzenie wiedzy
+- [ ] potrafię wyjaśnić wpływ rozmiaru fragmentu
+- [ ] rozumiem różnicę między wyszukiwaniem a generowaniem
+- [ ] potrafię wskazać, czy problem leży w wyszukiwaniu, czy w modelu
+- [ ] potrafię wyjaśnić, po co ponownie szeregować wyniki
 
-### Definition of Done
+### Kryteria ukończenia
 - [ ] odpowiedzi mają źródła
-- [ ] retrieval jest mierzalny
-- [ ] potrafię porównać co najmniej dwa warianty chunkingu
+- [ ] wyszukiwanie jest mierzalne
+- [ ] potrafię porównać co najmniej dwa warianty dzielenia na fragmenty
 - [ ] system nie polega wyłącznie na „wydaje się, że działa”
 
 ---
 
 # ETAP 6 — miesiące 16–18
-## Tool Calling + Agents + Messaging
+## Wywoływanie narzędzi + agenci + komunikacja asynchroniczna
 
-### Learn
-- [ ] tool calling
-- [ ] allowlist narzędzi
+### Nauka
+- [ ] wywoływanie narzędzi
+- [ ] lista dozwolonych narzędzi
 - [ ] walidacja parametrów
-- [ ] audit log
+- [ ] dziennik audytu
 - [ ] kontrola uprawnień
-- [ ] excessive agency
+- [ ] nadmierna autonomia
 - [ ] Service Bus praktycznie
-- [ ] queues/topics
-- [ ] retries
-- [ ] dead-letter queue
-- [ ] idempotency
-- [ ] eventual consistency
+- [ ] kolejki/tematy
+- [ ] ponowienia
+- [ ] kolejka utraconych wiadomości
+- [ ] idempotencja
+- [ ] spójność ostateczna
 
-### Build
-- [ ] agent odczytuje dane przez bezpieczne tools
-- [ ] agent wykonuje wybraną akcję workflow
+### Budowanie
+- [ ] agent odczytuje dane przez bezpieczne narzędzia
+- [ ] agent wykonuje wybraną akcję przepływu pracy
 - [ ] akcje są audytowane
-- [ ] mock workflow engine działa na potrzeby projektu
+- [ ] pozorowany silnik przepływu pracy działa na potrzeby projektu
 - [ ] Service Bus został przećwiczony praktycznie:
-  - [ ] w głównym projekcie, jeśli istnieje uzasadniony use case
-  - [ ] **albo** w małym laboratorium producer → queue → consumer → retry → DLQ
-- [ ] w `DECISIONS.md` zapisano, dlaczego messaging został lub nie został użyty w głównym systemie
+  - [ ] w głównym projekcie, jeśli istnieje uzasadniony przypadek użycia
+  - [ ] **albo** w małym laboratorium producent → kolejka → konsument → ponowienie → DLQ
+- [ ] w `DECISIONS.md` zapisano, dlaczego komunikacja asynchroniczna została lub nie została użyta w głównym systemie
 
-### Knowledge Check
-- [ ] potrafię uzasadnić REST vs queue
-- [ ] rozumiem idempotency
+### Sprawdzenie wiedzy
+- [ ] potrafię uzasadnić wybór REST lub kolejki
+- [ ] rozumiem idempotencję
 - [ ] rozumiem DLQ
-- [ ] potrafię wyjaśnić ryzyko excessive agency
+- [ ] potrafię wyjaśnić ryzyko nadmiernej autonomii
 - [ ] potrafię wskazać, które akcje wymagają dodatkowego potwierdzenia
 
-### Definition of Done
+### Kryteria ukończenia
 - [ ] agent bezpiecznie wywołuje wybrane narzędzia
 - [ ] akcje są walidowane i audytowane
 - [ ] krytyczne akcje są kontrolowane
-- [ ] potrafię praktycznie użyć Service Bus i wyjaśnić retry / DLQ
-- [ ] decyzja o użyciu lub nieużyciu messagingu w głównym projekcie jest uzasadniona
-- [ ] failure handling jest udokumentowany
+- [ ] potrafię praktycznie użyć Service Bus i wyjaśnić ponowienie / DLQ
+- [ ] decyzja o użyciu lub nieużyciu komunikacji asynchronicznej w głównym projekcie jest uzasadniona
+- [ ] obsługa awarii jest udokumentowana
 
 ---
 
 # ETAP 7 — miesiące 19–21
-## Identity + Security + Production AI
+## Tożsamość + bezpieczeństwo + produkcyjne AI
 
-### Learn
-Identity:
+### Nauka
+Tożsamość:
 - [ ] OAuth 2.0
 - [ ] OpenID Connect
-- [ ] access tokens
-- [ ] ID tokens
-- [ ] scopes
-- [ ] roles
-- [ ] app registrations
-- [ ] service principals
-- [ ] managed identities
+- [ ] tokeny dostępu
+- [ ] tokeny identyfikacyjne
+- [ ] zakresy
+- [ ] role
+- [ ] rejestracje aplikacji
+- [ ] jednostki usługi
+- [ ] tożsamości zarządzane
 
-AI Security:
-- [ ] prompt injection
-- [ ] indirect prompt injection
-- [ ] data exfiltration
-- [ ] insecure tool calling
-- [ ] excessive agency
-- [ ] sensitive data exposure
-- [ ] output validation
-- [ ] threat modeling — podstawy
+Bezpieczeństwo AI:
+- [ ] wstrzykiwanie promptów
+- [ ] pośrednie wstrzykiwanie promptów
+- [ ] eksfiltracja danych
+- [ ] niebezpieczne wywoływanie narzędzi
+- [ ] nadmierna autonomia
+- [ ] ujawnienie danych wrażliwych
+- [ ] walidacja danych wyjściowych
+- [ ] modelowanie zagrożeń — podstawy
 
-### Build
-- [ ] Entra authentication dla użytkownika
-- [ ] authorization po rolach/scopes
+### Budowanie
+- [ ] uwierzytelnianie Entra dla użytkownika
+- [ ] autoryzacja według ról/zakresów
 - [ ] RAG respektuje uprawnienia
 - [ ] narzędzia sprawdzają uprawnienia niezależnie od LLM
-- [ ] prosty threat model
-- [ ] testy negatywne security
+- [ ] prosty model zagrożeń
+- [ ] negatywne testy bezpieczeństwa
 
-### Knowledge Check
-- [ ] potrafię wyjaśnić OAuth2 vs OIDC
-- [ ] potrafię wyjaśnić access token vs ID token
-- [ ] rozumiem zasadę least privilege
-- [ ] potrafię wskazać typowy prompt injection flow
-- [ ] potrafię opisać security boundary systemu
+### Sprawdzenie wiedzy
+- [ ] potrafię wyjaśnić różnicę między OAuth2 a OIDC
+- [ ] potrafię wyjaśnić różnicę między tokenem dostępu a tokenem identyfikacyjnym
+- [ ] rozumiem zasadę najmniejszych uprawnień
+- [ ] potrafię wskazać typowy przebieg wstrzykiwania promptu
+- [ ] potrafię opisać granicę bezpieczeństwa systemu
 
-### Definition of Done
+### Kryteria ukończenia
 - [ ] użytkownik widzi tylko dane, do których ma dostęp
-- [ ] RAG respektuje ACL/permissions
-- [ ] tools nie ufają modelowi jako źródłu autoryzacji
-- [ ] sekrety i identity są poprawnie obsługiwane
-- [ ] istnieje threat model i testy security
+- [ ] RAG respektuje listy kontroli dostępu/uprawnienia
+- [ ] narzędzia nie ufają modelowi jako źródłu autoryzacji
+- [ ] sekrety i tożsamość są poprawnie obsługiwane
+- [ ] istnieje model zagrożeń i testy bezpieczeństwa
 
 ---
 
 # ETAP 8 — miesiące 22–24
-## Production Hardening + Rekrutacja
+## Wzmocnienie produkcyjne + Rekrutacja
 
-### Learn
-Observability:
-- [ ] logs
-- [ ] traces
-- [ ] metrics
+### Nauka
+Obserwowalność:
+- [ ] logi
+- [ ] ślady
+- [ ] metryki
 - [ ] Application Insights
-- [ ] token usage
-- [ ] latency
-- [ ] cost
+- [ ] wykorzystanie tokenów
+- [ ] opóźnienie
+- [ ] koszt
 
-Reliability:
-- [ ] retries — production patterns
-- [ ] timeout
-- [ ] circuit breaker
-- [ ] queues — production usage
-- [ ] caching
-- [ ] fallback
+Niezawodność:
+- [ ] ponowienia — wzorce produkcyjne
+- [ ] limit czasu
+- [ ] bezpiecznik
+- [ ] kolejki — wykorzystanie produkcyjne
+- [ ] buforowanie
+- [ ] zachowanie awaryjne
 
-AI Evaluation:
-- [ ] test dataset
-- [ ] expected answers
-- [ ] retrieval evaluation
-- [ ] hallucination checks
-- [ ] regression tests
+Ocena AI:
+- [ ] testowy zbiór danych
+- [ ] oczekiwane odpowiedzi
+- [ ] ocena wyszukiwania
+- [ ] kontrole halucynacji
+- [ ] testy regresji
 
 IaC:
 - [ ] Bicep
 - [ ] opcjonalnie Terraform
 
-### Build
-- [ ] observability end-to-end
-- [ ] dashboard / podstawowe alerty
-- [ ] retry/timeout/fallback tam, gdzie potrzebne
-- [ ] AI regression tests
+### Budowanie
+- [ ] obserwowalność od początku do końca
+- [ ] panel / podstawowe alerty
+- [ ] ponowienie/limit czasu/zachowanie awaryjne tam, gdzie potrzebne
+- [ ] testy regresji AI
 - [ ] Bicep dla kluczowych zasobów Azure
 - [ ] dokumentacja architektury
-- [ ] README projektu pod portfolio
+- [ ] README projektu do portfolio
 - [ ] przykładowy ADR dla ważnej decyzji
 
-### Knowledge Check
-- [ ] potrafię prześledzić request end-to-end
+### Sprawdzenie wiedzy
+- [ ] potrafię prześledzić żądanie od początku do końca
 - [ ] potrafię zdiagnozować awarię na podstawie logów/metryk
 - [ ] potrafię obronić kluczowe decyzje architektoniczne
-- [ ] potrafię wyjaśnić trade-offy koszt / niezawodność / złożoność
-- [ ] potrafię przejść techniczny walkthrough projektu
+- [ ] potrafię wyjaśnić kompromisy dotyczące kosztu / niezawodności / złożoności
+- [ ] potrafię przeprowadzić techniczne omówienie projektu
 
-### Definition of Done
-- [ ] system działa end-to-end
-- [ ] deployment jest powtarzalny
-- [ ] security jest opisane
-- [ ] monitoring działa
-- [ ] reliability patterns są użyte celowo
-- [ ] AI evaluation jest zautomatyzowane na podstawowym poziomie
-- [ ] istnieje dokumentacja architektury i portfolio-ready README
+### Kryteria ukończenia
+- [ ] system działa od początku do końca
+- [ ] wdrożenie jest powtarzalne
+- [ ] bezpieczeństwo jest opisane
+- [ ] monitorowanie działa
+- [ ] wzorce niezawodności są użyte celowo
+- [ ] ocena AI jest zautomatyzowana na podstawowym poziomie
+- [ ] istnieje dokumentacja architektury i README gotowy do portfolio
 - [ ] potrafię obronić system na rozmowie technicznej

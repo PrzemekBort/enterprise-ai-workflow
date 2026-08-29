@@ -1,55 +1,55 @@
-# Current Progress v2
+# Bieżące postępy v2
 
-## Current stage
+## Bieżący etap
 ETAP 0 — Środowisko i fundamenty
 
-## Current project version
-V0 / setup
+## Bieżąca wersja projektu
+V0 / konfiguracja
 
-## Current focus
+## Bieżący obszar pracy
 -
 
-## Learn
-**Completed:**
+## Nauka
+**Ukończone:**
 -
 
-**In progress:**
+**W toku:**
 -
 
-## Build
-**Completed:**
+## Budowanie
+**Ukończone:**
 -
 
-**In progress:**
+**W toku:**
 -
 
-## Knowledge Check
+## Sprawdzenie wiedzy
 **Potrafię bez AI:**
 -
 
 **Jeszcze z pomocą:**
 -
 
-## Definition of Done
+## Kryteria ukończenia
 - [ ]
 - [ ]
 - [ ]
 
-## Blocked
+## Blokady
 -
 
-## Open knowledge gaps
-| Luka | Confidence 0–5 | Blokuje etap? | Revisit |
+## Otwarte luki w wiedzy
+| Luka | Pewność 0–5 | Blokuje etap? | Powrót |
 |---|---:|---|---|
 |  |  |  |  |
 
-## Next 3 steps
+## Następne 3 kroki
 1.
 2.
 3.
 
-## Current risks
-- Scope creep:
+## Bieżące ryzyka
+- Rozszerzanie zakresu:
 - Brak regularności:
 - Zbyt długie utknięcie:
 - Zbyt duża delegacja do AI:

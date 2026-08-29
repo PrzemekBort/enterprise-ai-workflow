@@ -1,10 +1,10 @@
-# Reviews v2
+# Przeglądy v2
 
-# Weekly Review
+# Przegląd tygodniowy
 
 ### Tydzień: YYYY-WXX
 
-## Execution
+## Realizacja
 **Planowane cele:**
 1.
 2.
@@ -16,7 +16,7 @@
 **Niewykonane:**
 -
 
-## Learn / Build / Knowledge
+## Nauka / Budowanie / Wiedza
 **Czego się nauczyłem:**
 -
 
@@ -28,7 +28,7 @@
 
 ## Ryzyka
 - Utknąłem > 2–3 h:
-- Scope creep:
+- Rozszerzanie zakresu:
 - Za dużo delegacji do AI:
 - Plan był zbyt szeroki:
 
@@ -39,16 +39,16 @@
 
 ---
 
-# Monthly Review
+# Przegląd miesięczny
 
 ### Miesiąc: YYYY-MM
 
-## Roadmap
+## Roadmapa
 - Aktualny etap:
-- Learn:
-- Build:
-- Knowledge Check:
-- DoD:
+- Nauka:
+- Budowanie:
+- Sprawdzenie wiedzy:
+- Kryteria ukończenia:
 
 ## Kompetencje
 - Największy wzrost:
@@ -62,12 +62,12 @@
 - aktywne tygodnie:
 - tygodnie 0h:
 
-## AI usage
+## Wykorzystanie AI
 - gdzie AI pomogło:
 - gdzie zrobiło za dużo:
 - co następnym razem zrobię sam:
 
-## Scope
+## Zakres
 - nowe technologie:
 - potrzebne / niepotrzebne:
 - co trafia do `LATER.md`:
@@ -80,30 +80,30 @@
 
 ---
 
-# Gate Review — po etapie
+# Przegląd etapowy — po etapie
 
 ### Etap:
 ### Data:
 
-## Learn
+## Nauka
 - [ ] kluczowe pojęcia są zrozumiane
 
-## Build
+## Budowanie
 - [ ] wymagane elementy istnieją w projekcie
 
-## Knowledge Check
+## Sprawdzenie wiedzy
 - [ ] potrafię wyjaśnić kluczowe pojęcia
 - [ ] potrafię wykonać podstawowe zadania bez prowadzenia AI
 - [ ] potrafię debugować typowe problemy
 - [ ] potrafię obronić główne decyzje techniczne
 
-## Definition of Done
+## Kryteria ukończenia
 - [ ] wszystkie kryteria blokujące są spełnione
 
 ## Luki blokujące
 -
 
-## Luki nieblokujące / revisit
+## Luki nieblokujące / do ponownego rozważenia
 -
 
 ## Czy siedzę w etapie za długo?

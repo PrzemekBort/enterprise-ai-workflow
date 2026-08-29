@@ -1,4 +1,4 @@
-# Learning Log v2
+# Dziennik nauki v2
 
 > Po każdej sesji 3–5 minut.
 
@@ -9,13 +9,13 @@
 **Etap / sprint:**
 -
 
-**Learn — czego się dowiedziałem:**
+**Nauka — czego się dowiedziałem:**
 -
 
-**Build — co zrobiłem w projekcie:**
+**Budowanie — co zrobiłem w projekcie:**
 -
 
-**Knowledge Check — co potrafię teraz bez AI:**
+**Sprawdzenie wiedzy — co potrafię teraz bez AI:**
 -
 
 **Problem / luka:**
@@ -33,7 +33,7 @@
 **Następny krok:**
 -
 
-**Confidence (0–5):**
+**Pewność (0–5):**
 - temat: X/5
 
 ---

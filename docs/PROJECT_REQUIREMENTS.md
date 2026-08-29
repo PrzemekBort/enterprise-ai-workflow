@@ -1,198 +1,198 @@
-# Enterprise AI Workflow — Project Requirements
+# Enterprise AI Workflow — Wymagania projektu
 
-## 1. Purpose
-`Enterprise AI Workflow` is a generic internal enterprise application for handling business requests, documents, approvals, workflow history and, in later versions, AI-assisted processing and actions.
+## 1. Cel
+`Enterprise AI Workflow` to ogólna wewnętrzna aplikacja korporacyjna do obsługi wniosków biznesowych, dokumentów, zatwierdzeń, historii przepływu pracy, a w późniejszych wersjach także przetwarzania i działań wspomaganych przez AI.
 
-This document defines **what the system is expected to do**, not how it must be implemented. Architectural and implementation decisions not explicitly constrained here remain the developer's responsibility.
+Ten dokument określa **co system powinien robić**, a nie jak ma zostać zaimplementowany. Decyzje architektoniczne i implementacyjne, które nie zostały tu jednoznacznie ograniczone, pozostają w gestii dewelopera.
 
-## 2. Core business concept
-A user creates an internal business request. A request may contain data and documents. It can move through a controlled workflow, be reviewed, approved or rejected, and retain a history of important actions.
+## 2. Główna koncepcja biznesowa
+Użytkownik tworzy wewnętrzny wniosek biznesowy. Wniosek może zawierać dane i dokumenty. Może przechodzić przez kontrolowany przepływ pracy, podlegać przeglądowi, zatwierdzeniu lub odrzuceniu oraz zachowywać historię ważnych działań.
 
-Over time the system gains:
-- document processing,
-- cloud deployment,
-- LLM-based document extraction,
-- enterprise knowledge search / RAG,
-- AI tool calling,
-- enterprise identity and authorization,
-- production observability and reliability.
+Z czasem system zyskuje:
+- przetwarzanie dokumentów,
+- wdrożenie w chmurze,
+- ekstrakcję danych z dokumentów opartą na LLM,
+- wyszukiwanie wiedzy przedsiębiorstwa / RAG,
+- wywoływanie narzędzi przez AI,
+- tożsamość korporacyjną i autoryzację,
+- obserwowalność i niezawodność produkcyjną.
 
-## 3. Core business concepts
-The system should eventually represent:
-- **User** — person using the system,
-- **Request** — business request,
-- **Document** — file associated with a request,
-- **Approval** — decision associated with a request,
-- **Task** — work resulting from a process,
-- **Audit Event** — record of an important action or state change.
+## 3. Główne pojęcia biznesowe
+System powinien docelowo reprezentować:
+- **Użytkownika** — osobę korzystającą z systemu,
+- **Wniosek** — wniosek biznesowy,
+- **Dokument** — plik powiązany z wnioskiem,
+- **Zatwierdzenie** — decyzję powiązaną z wnioskiem,
+- **Zadanie** — pracę wynikającą z procesu,
+- **Zdarzenie audytowe** — zapis ważnego działania lub zmiany stanu.
 
-This does not prescribe separate entities, aggregates, modules or services.
+Nie narzuca to oddzielnych encji, agregatów, modułów ani usług.
 
-## 4. Request lifecycle
+## 4. Cykl życia wniosku
 
-The initial V1 lifecycle is intentionally simple:
+Początkowy cykl życia w V1 jest celowo prosty:
 
 ```text
-Draft
+Wersja robocza
   ↓
-Submitted
-  ├──→ Approved
-  └──→ Rejected
+Złożony
+  ├──→ Zatwierdzony
+  └──→ Odrzucony
 ```
 
-`UnderReview`, `Completed` and other states may be introduced later only when a concrete business requirement justifies them.
+Stany `W trakcie przeglądu`, `Ukończony` i inne mogą zostać wprowadzone później tylko wtedy, gdy uzasadnia je konkretne wymaganie biznesowe.
 
-The system must:
-- reject invalid state transitions,
-- preserve important lifecycle history,
-- make the current state unambiguous.
+System musi:
+- odrzucać nieprawidłowe przejścia stanów,
+- zachowywać ważną historię cyklu życia,
+- jednoznacznie przedstawiać bieżący stan.
 
-Open decisions include transition rules, approval modeling and where workflow logic belongs.
+Otwarte decyzje obejmują reguły przejść, modelowanie zatwierdzeń i umiejscowienie logiki przepływu pracy.
 
 ---
 
-# 5. V1 — Request Management
+# 5. V1 — Zarządzanie wnioskami
 
-## Business goal
-An employee can create and submit a request. An authorized reviewer can approve or reject it. Important actions remain visible in history.
+## Cel biznesowy
+Pracownik może utworzyć i złożyć wniosek. Upoważniony recenzent może go zatwierdzić lub odrzucić. Ważne działania pozostają widoczne w historii.
 
-In V1, user identity and reviewer permissions may be simulated or represented by a simplified application-level mechanism. Production identity and authorization are introduced in V7.
+W V1 tożsamość użytkownika i uprawnienia recenzenta mogą być symulowane lub reprezentowane przez uproszczony mechanizm na poziomie aplikacji. Tożsamość i autoryzacja klasy produkcyjnej zostają wprowadzone w V7.
 
-## Required capabilities
-- create a request,
-- retrieve one request,
-- list requests,
-- modify allowed data in an appropriate state,
-- submit a request,
-- approve a request,
-- reject a request,
-- view request history.
+## Wymagane możliwości
+- utworzenie wniosku,
+- pobranie jednego wniosku,
+- wyświetlenie listy wniosków,
+- modyfikowanie dozwolonych danych w odpowiednim stanie,
+- złożenie wniosku,
+- zatwierdzenie wniosku,
+- odrzucenie wniosku,
+- wyświetlenie historii wniosku.
 
-## Minimum request information
-- unique identifier,
-- author,
-- title,
-- description,
+## Minimalne informacje o wniosku
+- unikalny identyfikator,
+- autor,
+- tytuł,
+- opis,
 - status,
-- creation timestamp,
-- last modification timestamp.
+- znacznik czasu utworzenia,
+- znacznik czasu ostatniej modyfikacji.
 
-## Business rules
-- approval is allowed only from valid states,
-- rejection is allowed only from valid states,
-- invalid transitions are rejected,
-- invalid input cannot silently create inconsistent data,
-- important state-changing operations are recorded.
+## Reguły biznesowe
+- zatwierdzenie jest dozwolone tylko z prawidłowych stanów,
+- odrzucenie jest dozwolone tylko z prawidłowych stanów,
+- nieprawidłowe przejścia są odrzucane,
+- nieprawidłowe dane wejściowe nie mogą bez powiadomienia tworzyć niespójnych danych,
+- ważne operacje zmieniające stan są rejestrowane.
 
-## Audit expectation
-The system should answer: **who performed what action, when, and on which request?**
+## Oczekiwania dotyczące audytu
+System powinien odpowiadać na pytanie: **kto wykonał jakie działanie, kiedy i na którym wniosku?**
 
-Example events:
+Przykładowe zdarzenia:
 - `RequestCreated`
 - `RequestUpdated`
 - `RequestSubmitted`
 - `RequestApproved`
 - `RequestRejected`
 
-## Acceptance criteria
-V1 is complete when:
-- a request can be created,
-- it can move through its intended lifecycle,
-- invalid transitions are rejected,
-- approve/reject work only when allowed,
-- current state can be retrieved,
-- meaningful history can be retrieved,
-- invalid input is handled safely.
+## Kryteria akceptacji
+V1 jest ukończona, gdy:
+- można utworzyć wniosek,
+- może on przechodzić przez zamierzony cykl życia,
+- nieprawidłowe przejścia są odrzucane,
+- zatwierdzenie/odrzucenie działa tylko wtedy, gdy jest dozwolone,
+- można pobrać bieżący stan,
+- można pobrać istotną historię,
+- nieprawidłowe dane wejściowe są bezpiecznie obsługiwane.
 
-## Explicit non-requirements
-V1 does not require:
+## Wyraźnie wykluczone wymagania
+V1 nie wymaga:
 - Entra ID,
-- production-grade authorization,
+- autoryzacji klasy produkcyjnej,
 - AI,
-- cloud deployment,
-- microservices,
+- wdrożenia w chmurze,
+- mikrousług,
 - Service Bus,
-- advanced document processing,
-- complex frontend UI.
+- zaawansowanego przetwarzania dokumentów,
+- złożonego interfejsu użytkownika.
 
 ---
 
-# 6. V2 — Documents and Document Processing
+# 6. V2 — Dokumenty i ich przetwarzanie
 
-## Business goal
-A request can contain documents. The system can process an uploaded document and expose processing status and result.
+## Cel biznesowy
+Wniosek może zawierać dokumenty. System może przetworzyć przesłany dokument oraz udostępnić stan i wynik przetwarzania.
 
-## Required document information
-- identifier,
-- file name,
-- type/content type,
-- size,
-- upload timestamp,
-- uploader,
-- relationship to a request.
+## Wymagane informacje o dokumencie
+- identyfikator,
+- nazwa pliku,
+- typ/typ zawartości,
+- rozmiar,
+- znacznik czasu przesłania,
+- osoba przesyłająca,
+- powiązanie z wnioskiem.
 
-## Required capabilities
-- attach a document to a request,
-- accept it for processing,
-- extract basic text/content without AI,
-- store/reference the result,
-- detect processing failure,
-- expose processing status,
-- retry failed processing where appropriate.
+## Wymagane możliwości
+- dołączenie dokumentu do wniosku,
+- przyjęcie go do przetwarzania,
+- wyodrębnienie podstawowego tekstu/zawartości bez AI,
+- zapisanie wyniku lub odwołania do niego,
+- wykrycie niepowodzenia przetwarzania,
+- udostępnienie stanu przetwarzania,
+- ponowienie nieudanego przetwarzania tam, gdzie jest to właściwe.
 
-## Acceptance criteria
-- documents can be attached,
-- metadata is preserved,
-- processing can succeed or fail explicitly,
-- failure does not leave undefined state,
-- retry is possible where allowed.
+## Kryteria akceptacji
+- dokumenty można dołączać,
+- metadane są zachowywane,
+- przetwarzanie może zakończyć się jawnym sukcesem lub niepowodzeniem,
+- niepowodzenie nie pozostawia niezdefiniowanego stanu,
+- ponowienie jest możliwe tam, gdzie jest dozwolone.
 
-## Open decisions
-- physical storage,
-- metadata ownership,
-- entity/aggregate modeling,
-- API shape,
-- sync vs async processing,
-- .NET ↔ Python communication,
-- retry semantics.
-
----
-
-# 7. V3 — Cloud Deployment
-
-## Business goal
-The application operates as a cloud-hosted system in Azure.
-
-## Required capabilities
-- application backend,
-- database,
-- document storage,
-- safe secret/config handling,
-- automated deployment,
-- monitoring.
-
-## Acceptance criteria
-- core application works in Azure,
-- deployment is repeatable,
-- secrets are not stored in source code,
-- health/failures are observable,
-- database and document storage work from the deployed application.
-
-A cloud service should be introduced only to solve a concrete requirement.
+## Otwarte decyzje
+- fizyczne miejsce przechowywania,
+- własność metadanych,
+- modelowanie encji/agregatów,
+- kształt API,
+- przetwarzanie synchroniczne lub asynchroniczne,
+- komunikacja .NET ↔ Python,
+- semantyka ponowień.
 
 ---
 
-# 8. V4 — AI Document Processing
+# 7. V3 — Wdrożenie w chmurze
 
-## Business goal
-The system uses an LLM to extract structured business information from documents.
+## Cel biznesowy
+Aplikacja działa jako system hostowany w chmurze Azure.
 
-Example:
+## Wymagane możliwości
+- zaplecze aplikacji,
+- baza danych,
+- magazyn dokumentów,
+- bezpieczna obsługa sekretów/konfiguracji,
+- zautomatyzowane wdrożenie,
+- monitorowanie.
+
+## Kryteria akceptacji
+- podstawowa aplikacja działa w Azure,
+- wdrożenie jest powtarzalne,
+- sekrety nie są przechowywane w kodzie źródłowym,
+- stan i awarie są obserwowalne,
+- baza danych i magazyn dokumentów działają z wdrożonej aplikacji.
+
+Usługa chmurowa powinna być wprowadzana wyłącznie w celu spełnienia konkretnego wymagania.
+
+---
+
+# 8. V4 — Przetwarzanie dokumentów przez AI
+
+## Cel biznesowy
+System wykorzystuje LLM do wyodrębniania z dokumentów ustrukturyzowanych informacji biznesowych.
+
+Przykład:
 
 ```text
 Invoice.pdf
     ↓
-AI processing
+    Przetwarzanie AI
     ↓
 {
   "invoiceNumber": "...",
@@ -203,276 +203,276 @@ AI processing
 }
 ```
 
-The schema is illustrative.
+Schemat ma charakter przykładowy.
 
-## Required capabilities
-- send extracted content to an LLM,
-- structured output,
-- schema validation,
-- business validation,
-- missing/invalid value handling,
-- retry where justified,
-- manual review,
-- accept/reject AI extraction,
-- audit important AI actions,
-- measure basic latency and cost.
+## Wymagane możliwości
+- wysłanie wyodrębnionej zawartości do LLM,
+- ustrukturyzowane dane wyjściowe,
+- walidacja schematu,
+- walidacja biznesowa,
+- obsługa brakujących/nieprawidłowych wartości,
+- ponowienie tam, gdzie jest uzasadnione,
+- ręczny przegląd,
+- akceptacja/odrzucenie ekstrakcji AI,
+- audyt ważnych działań AI,
+- pomiar podstawowego opóźnienia i kosztu.
 
-## Core rule
-**The LLM is not the source of truth.**
+## Główna zasada
+**LLM nie jest źródłem prawdy.**
 
-## Acceptance criteria
-- at least one document type can be converted to structured data,
-- malformed output is handled,
-- invalid data can be rejected,
-- a human can review extracted data,
-- important actions are auditable,
-- latency and cost can be observed.
+## Kryteria akceptacji
+- co najmniej jeden typ dokumentu można przekształcić w ustrukturyzowane dane,
+- nieprawidłowo sformatowane dane wyjściowe są obsługiwane,
+- nieprawidłowe dane można odrzucić,
+- człowiek może przejrzeć wyodrębnione dane,
+- ważne działania podlegają audytowi,
+- można obserwować opóźnienie i koszt.
 
-## Open decisions
-- document type,
-- schema,
-- prompts,
+## Otwarte decyzje
+- typ dokumentu,
+- schemat,
+- prompty,
 - model,
-- retry rules,
-- confidence representation,
-- review flow,
-- storage of extracted data.
+- reguły ponowień,
+- sposób przedstawiania pewności,
+- przebieg przeglądu,
+- przechowywanie wyodrębnionych danych.
 
 ---
 
-# 9. V5 — Enterprise Knowledge Assistant
+# 9. V5 — Asystent wiedzy przedsiębiorstwa
 
-## Business goal
-A user can ask questions about documents available in the system and receive an answer supported by sources.
+## Cel biznesowy
+Użytkownik może zadawać pytania dotyczące dokumentów dostępnych w systemie i otrzymywać odpowiedzi poparte źródłami.
 
-## Required capabilities
-- ingest documents into a searchable pipeline,
-- retrieve relevant content,
-- generate an answer using retrieved content,
-- identify source material.
+## Wymagane możliwości
+- wprowadzanie dokumentów do przeszukiwalnego potoku,
+- wyszukiwanie odpowiedniej zawartości,
+- generowanie odpowiedzi z użyciem wyszukanej zawartości,
+- wskazywanie materiału źródłowego.
 
-## Core rule
-An answer without source information is not a complete implementation.
+## Główna zasada
+Odpowiedź bez informacji o źródle nie stanowi kompletnej implementacji.
 
-## Acceptance criteria
-- user can ask a question,
-- relevant content is retrieved,
-- answer contains source references,
-- retrieval can be evaluated,
-- retrieval failures can be distinguished from generation failures.
+## Kryteria akceptacji
+- użytkownik może zadać pytanie,
+- odpowiednia zawartość zostaje wyszukana,
+- odpowiedź zawiera odwołania do źródeł,
+- jakość wyszukiwania można ocenić,
+- niepowodzenia wyszukiwania można odróżnić od niepowodzeń generowania.
 
-## Open decisions
-- vector store,
-- chunking,
-- metadata,
-- retrieval algorithm,
-- hybrid search,
-- reranking,
-- evaluation dataset and metrics.
+## Otwarte decyzje
+- magazyn wektorowy,
+- dzielenie na fragmenty,
+- metadane,
+- algorytm wyszukiwania,
+- wyszukiwanie hybrydowe,
+- ponowne szeregowanie wyników,
+- zbiór danych i metryki do oceny.
 
 ---
 
-# 10. V6 — AI Assistant and Tool Calling
+# 10. V6 — Asystent AI i wywoływanie narzędzi
 
-## Business goal
-AI can interact with selected application functions, not only generate text.
+## Cel biznesowy
+AI może wchodzić w interakcje z wybranymi funkcjami aplikacji, a nie tylko generować tekst.
 
-Examples:
+Przykłady:
 - `get_user_requests(...)`
 - `submit_request(...)`
 
-## Required capabilities
-- limited explicit tool set,
-- parameter validation,
-- authorization outside the LLM,
-- action audit,
-- stronger controls for state-changing actions,
-- safe failure handling.
+## Wymagane możliwości
+- ograniczony, jawny zestaw narzędzi,
+- walidacja parametrów,
+- autoryzacja poza LLM,
+- audyt działań,
+- silniejsze mechanizmy kontroli dla działań zmieniających stan,
+- bezpieczna obsługa awarii.
 
-## Core rules
-- the LLM is not the authorization authority,
-- tools do not trust model-generated identity/permissions,
-- state-changing actions require stronger controls than read-only actions.
+## Główne zasady
+- LLM nie jest organem decydującym o autoryzacji,
+- narzędzia nie ufają tożsamości/uprawnieniom wygenerowanym przez model,
+- działania zmieniające stan wymagają silniejszych mechanizmów kontroli niż działania tylko do odczytu.
 
-## Acceptance criteria
-- at least one read-only tool works,
-- at least one controlled state-changing tool works,
-- invalid calls are rejected,
-- unauthorized calls are rejected,
-- actions are auditable,
-- failure handling is defined.
+## Kryteria akceptacji
+- działa co najmniej jedno narzędzie tylko do odczytu,
+- działa co najmniej jedno kontrolowane narzędzie zmieniające stan,
+- nieprawidłowe wywołania są odrzucane,
+- nieautoryzowane wywołania są odrzucane,
+- działania podlegają audytowi,
+- obsługa awarii jest zdefiniowana.
 
-## Open decisions
-- tool contracts,
-- confirmation requirements,
-- orchestration,
-- service boundaries,
-- sync vs async execution,
-- messaging use.
-
----
-
-# 11. V7 — Enterprise Identity and Security
-
-## Business goal
-Users and AI-assisted functionality respect real enterprise identity and authorization boundaries.
-
-## Required capabilities
-- Entra ID authentication,
-- roles/scopes or equivalent,
-- authorization for business operations,
-- request/document permissions,
-- permission-aware RAG,
-- least privilege,
-- secure service-to-service identity,
-- safe secret handling.
-
-## Core security rule
-**If a user cannot access a resource through the normal application/API, AI and RAG must not expose it either.**
-
-## Acceptance criteria
-- authenticated users have identifiable permissions,
-- unauthorized API operations are rejected,
-- unauthorized documents are not exposed through RAG,
-- AI tools enforce authorization independently of the model,
-- service identities use least privilege,
-- a basic threat model exists.
+## Otwarte decyzje
+- kontrakty narzędzi,
+- wymagania dotyczące potwierdzania,
+- orkiestracja,
+- granice usług,
+- wykonywanie synchroniczne lub asynchroniczne,
+- wykorzystanie komunikacji asynchronicznej.
 
 ---
 
-# 12. V8 — Production Hardening
+# 11. V7 — Tożsamość i bezpieczeństwo przedsiębiorstwa
 
-## Business goal
-The application behaves like an operational system rather than only a prototype.
+## Cel biznesowy
+Użytkownicy i funkcje wspomagane przez AI przestrzegają rzeczywistych granic tożsamości i autoryzacji przedsiębiorstwa.
 
-## Required capabilities
+## Wymagane możliwości
+- uwierzytelnianie Entra ID,
+- role/zakresy lub ich odpowiednik,
+- autoryzacja operacji biznesowych,
+- uprawnienia do wniosków/dokumentów,
+- RAG uwzględniający uprawnienia,
+- zasada najmniejszych uprawnień,
+- bezpieczna tożsamość w komunikacji między usługami,
+- bezpieczna obsługa sekretów.
 
-### Observability
-- logs,
-- metrics,
-- traces,
-- request correlation,
-- AI latency,
-- token/cost usage,
-- meaningful health information.
+## Główna zasada bezpieczeństwa
+**Jeżeli użytkownik nie może uzyskać dostępu do zasobu przez zwykłą aplikację/API, AI i RAG również nie mogą go ujawnić.**
 
-### Reliability
-Where justified:
-- retries,
-- timeouts,
-- circuit breaking,
-- queues,
-- caching,
-- fallback behavior.
-
-### AI quality
-- evaluation dataset,
-- expected behavior,
-- retrieval evaluation,
-- regression checks,
-- hallucination/error checks.
-
-### Infrastructure and documentation
-- repeatable IaC for key Azure resources,
-- architecture description,
-- important decisions,
-- operational assumptions,
-- portfolio-ready README.
-
-## Acceptance criteria
-- important requests can be traced end-to-end,
-- common failures can be diagnosed from telemetry,
-- deployment/infrastructure is repeatable,
-- reliability mechanisms are deliberate,
-- AI behavior has repeatable basic evaluation,
-- architecture and trade-offs are documented.
+## Kryteria akceptacji
+- uwierzytelnieni użytkownicy mają możliwe do zidentyfikowania uprawnienia,
+- nieautoryzowane operacje API są odrzucane,
+- dokumenty bez uprawnień nie są ujawniane przez RAG,
+- narzędzia AI wymuszają autoryzację niezależnie od modelu,
+- tożsamości usług korzystają z najmniejszych uprawnień,
+- istnieje podstawowy model zagrożeń.
 
 ---
 
-# 13. Global project constraints
+# 12. V8 — Wzmocnienie produkcyjne
 
-## Prefer simplicity
-Use the simplest reasonable architecture that satisfies the **current** version.
+## Cel biznesowy
+Aplikacja zachowuje się jak działający system, a nie tylko jak prototyp.
 
-## Technology must solve a problem
-Do not introduce messaging, microservices, caching, extra databases, orchestration frameworks or cloud services only because they may be useful later.
+## Wymagane możliwości
 
-## Incremental architecture is expected
-Refactoring is allowed and expected. Early decisions do not have to survive to V8.
+### Obserwowalność
+- logi,
+- metryki,
+- ślady,
+- korelacja żądań,
+- opóźnienie AI,
+- wykorzystanie tokenów/koszt,
+- znaczące informacje o stanie.
 
-## One main product
-The main project remains `Enterprise AI Workflow`. Small labs may be used to learn isolated concepts.
+### Niezawodność
+Tam, gdzie jest to uzasadnione:
+- ponowienia,
+- limity czasu,
+- bezpieczniki,
+- kolejki,
+- buforowanie,
+- zachowanie awaryjne.
+
+### Jakość AI
+- zbiór danych do oceny,
+- oczekiwane zachowanie,
+- ocena wyszukiwania,
+- kontrole regresji,
+- kontrole halucynacji/błędów.
+
+### Infrastruktura i dokumentacja
+- powtarzalna infrastruktura jako kod (IaC) dla kluczowych zasobów Azure,
+- opis architektury,
+- ważne decyzje,
+- założenia operacyjne,
+- README gotowy do portfolio.
+
+## Kryteria akceptacji
+- ważne żądania można prześledzić od początku do końca,
+- typowe awarie można diagnozować na podstawie telemetrii,
+- wdrożenie/infrastruktura są powtarzalne,
+- mechanizmy niezawodności są stosowane celowo,
+- zachowanie AI podlega powtarzalnej podstawowej ocenie,
+- architektura i kompromisy są udokumentowane.
 
 ---
 
-# 14. Out of scope unless explicitly added later
-- production-quality visual design,
-- mobile application,
+# 13. Globalne ograniczenia projektu
+
+## Preferuj prostotę
+Używaj najprostszej rozsądnej architektury, która spełnia wymagania **bieżącej** wersji.
+
+## Technologia musi rozwiązywać problem
+Nie wprowadzaj komunikacji asynchronicznej, mikrousług, buforowania, dodatkowych baz danych, platform orkiestracyjnych ani usług chmurowych tylko dlatego, że mogą przydać się później.
+
+## Oczekiwana jest architektura rozwijana przyrostowo
+Refaktoryzacja jest dozwolona i oczekiwana. Wczesne decyzje nie muszą przetrwać do V8.
+
+## Jeden główny produkt
+Głównym projektem pozostaje `Enterprise AI Workflow`. Małe laboratoria mogą służyć do nauki odizolowanych pojęć.
+
+---
+
+# 14. Poza zakresem, chyba że zostanie później wyraźnie dodane
+- projekt wizualny klasy produkcyjnej,
+- aplikacja mobilna,
 - Kubernetes,
-- custom LLM training,
-- advanced ML model development,
-- full BPMN/workflow engine,
-- ERP-scale functionality,
-- complex multi-tenancy,
-- billing,
-- dozens of workflow types,
-- microservices for every component,
-- AWS/GCP versions.
+- niestandardowe trenowanie LLM,
+- zaawansowany rozwój modeli uczenia maszynowego,
+- pełny silnik BPMN/przepływu pracy,
+- funkcjonalność w skali ERP,
+- złożona wielodostępność,
+- rozliczenia,
+- dziesiątki typów przepływów pracy,
+- mikrousługi dla każdego komponentu,
+- wersje dla AWS/GCP.
 
-A simple graphical interface may exist, but frontend engineering is not a primary requirement.
-
----
-
-# 15. Decisions intentionally left open
-The following are intentionally not predefined:
-- domain model details,
-- database schema,
-- solution/project structure,
-- controllers vs minimal APIs,
-- error model,
-- validation implementation,
-- audit implementation,
-- workflow implementation,
-- module boundaries,
-- .NET ↔ Python communication,
-- file storage strategy,
-- sync vs async processing,
-- REST vs messaging,
-- Service Bus usage,
-- AI integration design,
-- prompts,
-- RAG architecture,
-- vector storage,
-- chunking,
-- authorization model,
-- reliability mechanisms.
-
-Important decisions should be recorded in `DECISIONS.md`.
+Może istnieć prosty interfejs graficzny, ale inżynieria interfejsu użytkownika nie jest głównym wymaganiem.
 
 ---
 
-# 16. Reviewer guidance
+# 15. Decyzje celowo pozostawione otwarte
+Poniższe kwestie celowo nie zostały z góry określone:
+- szczegóły modelu domenowego,
+- schemat bazy danych,
+- struktura rozwiązania/projektu,
+- kontrolery lub minimalne API,
+- model błędów,
+- implementacja walidacji,
+- implementacja audytu,
+- implementacja przepływu pracy,
+- granice modułów,
+- komunikacja .NET ↔ Python,
+- strategia przechowywania plików,
+- przetwarzanie synchroniczne lub asynchroniczne,
+- REST lub komunikacja asynchroniczna,
+- wykorzystanie Service Bus,
+- projekt integracji AI,
+- prompty,
+- architektura RAG,
+- magazyn wektorowy,
+- dzielenie na fragmenty,
+- model autoryzacji,
+- mechanizmy niezawodności.
 
-A Reviewer evaluates the implementation against the **current project version**, not against an imagined final architecture.
-
-The Reviewer should ask:
-1. Does the implementation satisfy current business requirements?
-2. Are acceptance criteria met?
-3. Are business invariants enforced?
-4. Is the solution unnecessarily complex?
-5. Was any technology introduced without a concrete requirement?
-6. Are important decisions justified?
-7. Are later-version features being implemented prematurely?
-8. Does the current design create a serious problem for the next known stage?
-9. Are current security boundaries respected?
-10. Does the developer understand and own the implementation?
-
-A valid V1 solution should not be rejected because it does not yet contain V7/V8 mechanisms.
+Ważne decyzje należy zapisywać w `DECISIONS.md`.
 
 ---
 
-# 17. Initial implementation brief
+# 16. Wytyczne dla Recenzenta
 
-> Build the backend of a system in which a user can create a business request, submit it for review, and another user can approve or reject it. The system must enforce valid state transitions and preserve the history of important operations.
+Recenzent ocenia implementację względem **bieżącej wersji projektu**, a nie wyobrażonej architektury docelowej.
 
-This defines required behavior. The developer decides how the solution is modeled and implemented.
+Recenzent powinien zapytać:
+1. Czy implementacja spełnia bieżące wymagania biznesowe?
+2. Czy kryteria akceptacji są spełnione?
+3. Czy niezmienniki biznesowe są wymuszane?
+4. Czy rozwiązanie jest niepotrzebnie złożone?
+5. Czy wprowadzono jakąkolwiek technologię bez konkretnego wymagania?
+6. Czy ważne decyzje są uzasadnione?
+7. Czy funkcje późniejszych wersji są implementowane przedwcześnie?
+8. Czy bieżący projekt tworzy poważny problem dla następnego znanego etapu?
+9. Czy bieżące granice bezpieczeństwa są przestrzegane?
+10. Czy deweloper rozumie implementację i bierze za nią odpowiedzialność?
+
+Prawidłowe rozwiązanie V1 nie powinno zostać odrzucone dlatego, że nie zawiera jeszcze mechanizmów V7/V8.
+
+---
+
+# 17. Wstępne założenia implementacyjne
+
+> Zbuduj zaplecze systemu, w którym użytkownik może utworzyć wniosek biznesowy, przekazać go do przeglądu, a inny użytkownik może go zatwierdzić lub odrzucić. System musi wymuszać prawidłowe przejścia stanów i zachowywać historię ważnych operacji.
+
+Określa to wymagane zachowanie. Deweloper decyduje, jak rozwiązanie zostanie zamodelowane i zaimplementowane.

@@ -1,4 +1,4 @@
-# Technical Decisions
+# Decyzje techniczne
 
 > Zapisuj tylko decyzje, które mają realny wpływ na projekt.
 
@@ -22,7 +22,7 @@
 **Dlaczego:**
 -
 
-**Trade-offy:**
+**Kompromisy:**
 - plusy:
 - minusy:
 
@@ -32,4 +32,3 @@
 ---
 
 ## Decyzje
-

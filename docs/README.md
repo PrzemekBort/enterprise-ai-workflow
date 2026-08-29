@@ -1,17 +1,17 @@
-# Cloud / AI Learning System v2
+# System nauki chmury i AI v2
 
-System do prowadzenia 18–24-miesięcznego planu rozwoju w kierunku **Cloud / AI Engineer**.
+System do prowadzenia 18–24-miesięcznego planu rozwoju w kierunku **inżyniera chmury i AI**.
 
 ## Model pracy
 
 Każdy etap jest oceniany w czterech warstwach:
 
-**Learn → Build → Knowledge Check → Definition of Done**
+**Nauka → Budowanie → Sprawdzenie wiedzy → Kryteria ukończenia**
 
-- **Learn** — rozumiesz pojęcia.
-- **Build** — użyłeś ich w projekcie.
-- **Knowledge Check** — potrafisz wyjaśnić / zrobić bez prowadzenia AI.
-- **Definition of Done** — etap można zamknąć.
+- **Nauka** — rozumiesz pojęcia.
+- **Budowanie** — użyłeś ich w projekcie.
+- **Sprawdzenie wiedzy** — potrafisz wyjaśnić / zrobić bez prowadzenia AI.
+- **Kryteria ukończenia** — etap można zamknąć.
 
 ## Pliki
 - `ROADMAP.md` — źródło prawdy dla kolejności i zakresu rozwoju
@@ -21,18 +21,18 @@ Każdy etap jest oceniany w czterech warstwach:
 - `PROGRESS.md` — bieżący stan rozwoju
 - `LEARNING_LOG.md` — log sesji
 - `COMPETENCY_MATRIX.md` — kompetencje 0–5 z dowodami
-- `REVIEWS.md` — weekly, monthly i gate review
-- `LATER.md` — parking lot / kontrola scope creep
-- `AI_RULES.md` — zasady Engineer / Tutor / Reviewer
-- `CAREER_CHECKPOINTS.md` — checkpointy związane z rynkiem pracy i certyfikatami
+- `REVIEWS.md` — przeglądy tygodniowe, miesięczne i etapowe
+- `LATER.md` — lista odłożonych tematów / kontrola rozszerzania zakresu
+- `.codex/agents/` — definicje i zasady pracy Inżyniera, Tutora i Recenzenta
+- `CAREER_CHECKPOINTS.md` — punkty kontrolne związane z rynkiem pracy i certyfikatami
 
 
 ## Rytm
 - każda sesja: `LEARNING_LOG.md`
-- co tydzień: Weekly Review + maks. 3 cele
+- co tydzień: przegląd tygodniowy + maks. 3 cele
 - co 2 tygodnie: zamknięcie sprintu
-- co miesiąc: Monthly Review + competency matrix
-- po etapie: Gate Review
+- co miesiąc: przegląd miesięczny + macierz kompetencji
+- po etapie: przegląd etapowy
 
 ## Zasady
 1. `ROADMAP.md` jest źródłem prawdy dla rozwoju i kolejności nauki.

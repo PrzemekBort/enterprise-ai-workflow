@@ -1,4 +1,4 @@
-# Competency Matrix v2
+# Macierz kompetencji v2
 
 ## Skala
 - **0** — nie wiem, co to jest
@@ -12,8 +12,8 @@
 Nie podnoś poziomu tylko dlatego, że „przerobiłeś temat”.
 - poziom 2 = rozumienie
 - poziom 3 = samodzielne użycie
-- poziom 4 = realne debugowanie
-- poziom 5 = obrona decyzji i trade-offów
+- poziom 4 = rzeczywiste debugowanie
+- poziom 5 = obrona decyzji i kompromisów
 
 | Kompetencja | Poziom 0–5 | Dowód praktyczny | Największa luka | Następny krok |
 |---|---:|---|---|---|
@@ -22,9 +22,9 @@ Nie podnoś poziomu tylko dlatego, że „przerobiłeś temat”.
 | HTTP/REST |  |  |  |  |
 | C# |  |  |  |  |
 | ASP.NET Core |  |  |  |  |
-| Dependency Injection |  |  |  |  |
+| Wstrzykiwanie zależności |  |  |  |  |
 | EF Core |  |  |  |  |
-| Testing .NET |  |  |  |  |
+| Testowanie .NET |  |  |  |  |
 | Python |  |  |  |  |
 | FastAPI |  |  |  |  |
 | SQL |  |  |  |  |
@@ -34,25 +34,25 @@ Nie podnoś poziomu tylko dlatego, że „przerobiłeś temat”.
 | GitHub Actions / CI/CD |  |  |  |  |
 | Azure Container Apps |  |  |  |  |
 | Azure SQL |  |  |  |  |
-| Storage Account |  |  |  |  |
+| Konto magazynu Azure |  |  |  |  |
 | Key Vault |  |  |  |  |
-| Managed Identity |  |  |  |  |
+| Tożsamość zarządzana |  |  |  |  |
 | Entra ID |  |  |  |  |
 | OAuth/OIDC |  |  |  |  |
-| RBAC / Authorization |  |  |  |  |
+| RBAC / Autoryzacja |  |  |  |  |
 | Service Bus |  |  |  |  |
 | Application Insights |  |  |  |  |
 | Bicep |  |  |  |  |
-| LLM APIs |  |  |  |  |
-| Structured Output |  |  |  |  |
-| Embeddings |  |  |  |  |
-| Vector Search |  |  |  |  |
+| API LLM |  |  |  |  |
+| Ustrukturyzowane dane wyjściowe |  |  |  |  |
+| Osadzenia |  |  |  |  |
+| Wyszukiwanie wektorowe |  |  |  |  |
 | RAG |  |  |  |  |
-| Retrieval Evaluation |  |  |  |  |
-| Tool Calling |  |  |  |  |
-| Agents |  |  |  |  |
-| AI Evaluation |  |  |  |  |
-| AI Security |  |  |  |  |
-| Observability |  |  |  |  |
-| Reliability Patterns |  |  |  |  |
-| Architecture |  |  |  |  |
+| Ocena wyszukiwania |  |  |  |  |
+| Wywoływanie narzędzi |  |  |  |  |
+| Agenci |  |  |  |  |
+| Ocena AI |  |  |  |  |
+| Bezpieczeństwo AI |  |  |  |  |
+| Obserwowalność |  |  |  |  |
+| Wzorce niezawodności |  |  |  |  |
+| Architektura |  |  |  |  |
