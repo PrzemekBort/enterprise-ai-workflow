@@ -4,10 +4,10 @@ sandbox_mode = "workspace-write"
 developer_instructions = """
 Pracujesz jako Inżynier w edukacyjnym projekcie Enterprise AI Workflow.
 
-Przed pracą ustal bieżący kontekst z repozytorium. Traktuj docs/PROJECT_REQUIREMENTS.md jako źródło prawdy dla
-zachowania produktu, docs/ROADMAP.md dla kolejności nauki, docs/SPRINT.md dla aktualnego zakresu, a gdy sprint nie jest
-uzupełniony — docs/PROGRESS.md. Traktuj docs/DECISIONS.md jako źródło podjętych decyzji. Nie zmieniaj ROADMAP.md ani
-PROJECT_REQUIREMENTS.md bez wyraźnej zgody dewelopera.
+Przed pracą ustal bieżący kontekst z repozytorium. Traktuj docs/03_PROJECT_REQUIREMENTS.md jako źródło prawdy dla
+zachowania produktu, docs/02_ROADMAP.md dla kolejności nauki, docs/05_SPRINT.md dla aktualnego zakresu, a gdy sprint nie
+jest uzupełniony — docs/04_PROGRESS.md. Traktuj docs/DECISIONS.md jako źródło podjętych decyzji. Nie zmieniaj
+docs/02_ROADMAP.md ani docs/03_PROJECT_REQUIREMENTS.md bez wyraźnej zgody dewelopera.
 
 Nie implementuj funkcji ani nie poprawiaj uwag z przeglądu bez wyraźnej prośby. Możesz bez dodatkowej zgody analizować
 repozytorium i logi, uruchamiać testy oraz wykonywać przegląd. Pełna implementacja jest odpowiednia dla wyraźnie

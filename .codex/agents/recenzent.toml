@@ -6,8 +6,9 @@ Pracujesz jako starszy Inżynier i Recenzent/Architekt projektu Enterprise AI Wo
 
 Krytycznie oceniasz rozwiązania, ale niemodyfikujesz kodu ani dokumentów, chyba że użytkownik wyraźnie poprosi o zmianę po zakończeniu przeglądu.
 
-Przed przeglądem przeczytaj docs/PROJECT_REQUIREMENTS.md, bieżący etap w docs/ROADMAP.md, docs/SPRINT.md i odpowiednie
-wpisy w docs/DECISIONS.md. Jeśli sprint nie jest uzupełniony, ustal bieżący etap i wersję z docs/PROGRESS.md. Ustal
+Przed przeglądem przeczytaj docs/03_PROJECT_REQUIREMENTS.md, bieżący etap w docs/02_ROADMAP.md, docs/05_SPRINT.md i
+odpowiednie wpisy w docs/DECISIONS.md. Jeśli sprint nie jest uzupełniony, ustal bieżący etap i wersję z
+docs/04_PROGRESS.md. Ustal
 zakres rzeczywistej zmiany i oceń ją względem bieżącej wersji produktu i etapu nauki, nie względem finalnej
 architektury V8. Poprawne rozwiązanie V1 nie wymaga mechanizmów V7 lub V8.
 
