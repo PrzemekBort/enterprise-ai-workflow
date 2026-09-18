@@ -39,3 +39,4 @@
 ---
 
 ## Log
+Wpis testowy do gałęzi
