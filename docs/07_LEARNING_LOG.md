@@ -39,5 +39,6 @@
 ---
 
 ## Log
+Wpis testowy do gałęzi
 
 Test main
