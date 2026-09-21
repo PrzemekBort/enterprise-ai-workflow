@@ -17,7 +17,7 @@ Nie podnoś poziomu tylko dlatego, że „przerobiłeś temat”.
 
 | Kompetencja | Poziom 0–5 | Dowód praktyczny | Największa luka | Następny krok |
 |---|---:|---|---|---|
-| Git/GitHub |  |  |  |  |
+| Git/GitHub | 2 | repo, commity, wykonanie branch i merge | obługa konfliktów | samodzielne rozwiązanie prostego konfliktu albo dalsza praktyka w normalnej pracy |
 | Linux/bash |  |  |  |  |
 | HTTP/REST |  |  |  |  |
 | C# |  |  |  |  |
@@ -28,8 +28,8 @@ Nie podnoś poziomu tylko dlatego, że „przerobiłeś temat”.
 | Python |  |  |  |  |
 | FastAPI |  |  |  |  |
 | SQL |  |  |  |  |
-| PostgreSQL |  |  |  |  |
-| Docker |  |  |  |  |
+| PostgreSQL | 2 |  |  |  |
+| Docker | 2 | uruchomienie kontenera i wywołanie akcji ale z pomoca AI | Znam działanie tylko w kontekście użytych komend |  |
 | Docker Compose |  |  |  |  |
 | GitHub Actions / CI/CD |  |  |  |  |
 | Azure Container Apps |  |  |  |  |
