@@ -67,16 +67,18 @@ Jeżeli jeden problem przekracza 2–3 h:
 
 # Retrospektywa
 ## Dowiezione
-- Do uzupełnienia po zakończeniu sprintu.
+Instalacja niezbędnych narzedzi
 
 ## Czego się nauczyłem
-- Do uzupełnienia po zakończeniu sprintu.
+Obsługa gita, branchy i merge
+Podstawowa obsługa dockera
 
 ## Co nadal umiem tylko z pomocą
-- Do uzupełnienia po zakończeniu sprintu.
+Obsługa dockera
 
 ## Rozszerzanie zakresu
-- Do uzupełnienia po zakończeniu sprintu.
+Brak rozszerzania zakresu
 
 ## Co przechodzi dalej
-- Ćwiczenie HTTP/REST, jeżeli nie zostanie podjęte po osiągnięciu celu sprintu.
+Diagnostyka i dlasza praca z dockerem
+Ćwiczenie HTTP/REST, jeżeli nie zostanie podjęte po osiągnięciu celu sprintu.

@@ -28,7 +28,7 @@ Nie podnoś poziomu tylko dlatego, że „przerobiłeś temat”.
 | Python |  |  |  |  |
 | FastAPI |  |  |  |  |
 | SQL |  |  |  |  |
-| PostgreSQL | 2 |  |  |  |
+| PostgreSQL | 2 | udany SELECT 1 przed i po restarcie kontenera | wykonywanie diagnostyki bez instrukcji | samodzielne odtworzenie połączenia i podstawowego zapytania |
 | Docker | 2 | uruchomienie kontenera i wywołanie akcji ale z pomoca AI | Znam działanie tylko w kontekście użytych komend | Poszerzenie wiedzy w praktyce |
 | Docker Compose |  |  |  |  |
 | GitHub Actions / CI/CD |  |  |  |  |
