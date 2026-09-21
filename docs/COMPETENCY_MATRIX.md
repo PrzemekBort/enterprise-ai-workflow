@@ -29,7 +29,7 @@ Nie podnoś poziomu tylko dlatego, że „przerobiłeś temat”.
 | FastAPI |  |  |  |  |
 | SQL |  |  |  |  |
 | PostgreSQL | 2 |  |  |  |
-| Docker | 2 | uruchomienie kontenera i wywołanie akcji ale z pomoca AI | Znam działanie tylko w kontekście użytych komend |  |
+| Docker | 2 | uruchomienie kontenera i wywołanie akcji ale z pomoca AI | Znam działanie tylko w kontekście użytych komend | Poszerzenie wiedzy w praktyce |
 | Docker Compose |  |  |  |  |
 | GitHub Actions / CI/CD |  |  |  |  |
 | Azure Container Apps |  |  |  |  |
