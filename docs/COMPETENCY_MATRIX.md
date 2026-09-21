@@ -17,7 +17,7 @@ Nie podnoś poziomu tylko dlatego, że „przerobiłeś temat”.
 
 | Kompetencja | Poziom 0–5 | Dowód praktyczny | Największa luka | Następny krok |
 |---|---:|---|---|---|
-| Git/GitHub | 2 | repo, commity, wykonanie branch i merge | obługa konfliktów | samodzielne rozwiązanie prostego konfliktu albo dalsza praktyka w normalnej pracy |
+| Git/GitHub | 3 | samodzielny branch i merge | obługa konfliktów | samodzielne rozwiązanie prostego konfliktu albo dalsza praktyka w normalnej pracy |
 | Linux/bash |  |  |  |  |
 | HTTP/REST |  |  |  |  |
 | C# |  |  |  |  |
