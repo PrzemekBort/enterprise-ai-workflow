@@ -17,24 +17,24 @@ V0 / konfiguracja — repozytorium dokumentacyjne, bez aplikacji i testów
 Uzyskać powtarzalny, samodzielnie sprawdzony fundament pracy: zweryfikowane narzędzia lokalne, pełny przepływ Git oraz działające kontenery Docker z lokalnym PostgreSQL.
 
 ## Nauka — maks. 3 tematy
-- [ ] Git: różnica między commitem, gałęzią i scaleniem oraz ich ślad w historii.
-- [ ] Terminal: rozpoznawanie braku instalacji i problemu z `PATH`.
-- [ ] Docker i PostgreSQL: kontener, port, proces bazy oraz podstawowe połączenie.
+- [x] Git: różnica między commitem, gałęzią i scaleniem oraz ich ślad w historii.
+- [x] Terminal: rozpoznawanie braku instalacji i problemu z `PATH`.
+- [x] Docker i PostgreSQL: kontener, port, proces bazy oraz podstawowe połączenie.
 
 ## Budowanie — maks. 3 rezultaty
-1. [ ] Udokumentowana w `07_LEARNING_LOG.md` weryfikacja środowiska: Git, .NET, Python i Docker odpowiadają na polecenia wersji; sposób dostępu do PostgreSQL jest znany.
-2. [ ] W repozytorium wykonano na małej zmianie przepływ gałąź → commit → scalenie, a deweloper potrafi wskazać rezultat w historii Git.
-3. [ ] Uruchomiono prosty kontener oraz lokalny PostgreSQL; połączenie z bazą i proste zapytanie kończą się powodzeniem.
+1. [x] Udokumentowana w `07_LEARNING_LOG.md` weryfikacja środowiska: Git, .NET, Python i Docker odpowiadają na polecenia wersji; sposób dostępu do PostgreSQL jest znany.
+2. [x] W repozytorium wykonano na małej zmianie przepływ gałąź → commit → scalenie, a deweloper potrafi wskazać rezultat w historii Git.
+3. [x] Uruchomiono prosty kontener oraz lokalny PostgreSQL; połączenie z bazą i proste zapytanie kończą się powodzeniem.
 
 ## Sprawdzenie wiedzy
-- [ ] Potrafię własnymi słowami wyjaśnić różnicę między commitem, gałęzią i scaleniem oraz przewidzieć stan historii po scaleniu.
-- [ ] Potrafię bez instrukcji krok po kroku utworzyć gałąź, zapisać małą zmianę w commicie i scalić ją z `main`.
-- [ ] Potrafię zdiagnozować, czy niedziałające polecenie lub połączenie z kontenerem wynika z instalacji, `PATH`, stanu kontenera czy mapowania portu.
+- [x] Potrafię własnymi słowami wyjaśnić różnicę między commitem, gałęzią i scaleniem oraz przewidzieć stan historii po scaleniu.
+- [x] Potrafię bez instrukcji krok po kroku utworzyć gałąź, zapisać małą zmianę w commicie i scalić ją z `main`.
+- [x] Potrafię zdiagnozować, czy niedziałające polecenie lub połączenie z kontenerem wynika z instalacji, `PATH`, stanu kontenera czy mapowania portu.
 
 ## Kryteria ukończenia sprintu
-- [ ] Wszystkie narzędzia potrzebne do zadań sprintu są dostępne i ich stan jest zapisany w dzienniku nauki.
-- [ ] Historia Git zawiera sprawdzalny rezultat samodzielnego przepływu gałąź → commit → scalenie.
-- [ ] Docker uruchamia kontenery, a PostgreSQL odpowiada na proste zapytanie po ponownym uruchomieniu środowiska.
+- [x] Wszystkie narzędzia potrzebne do zadań sprintu są dostępne i ich stan jest zapisany w dzienniku nauki.
+- [x] Historia Git zawiera sprawdzalny rezultat samodzielnego przepływu gałąź → commit → scalenie.
+- [x] Docker uruchamia kontenery, a PostgreSQL odpowiada na proste zapytanie po ponownym uruchomieniu środowiska.
 
 ## Nie robimy w tym sprincie
 - Nie rozpoczynamy implementacji ASP.NET Core ani V1.
@@ -46,14 +46,10 @@ Uzyskać powtarzalny, samodzielnie sprawdzony fundament pracy: zweryfikowane nar
 - Proste żądanie HTTP do testowego API — następny ograniczony krok w ETAPIE 0 po ustabilizowaniu środowiska.
 
 ## Blokady
-- Podczas przeglądu 2026-08-29 polecenia `python`, `docker` i `psql` nie były dostępne w `PATH`; trzeba sprawdzić, czy narzędzia nie są zainstalowane, czy tylko nie są widoczne w bieżącej powłoce.
-- Brak wpisów w dzienniku nauki i macierzy kompetencji uniemożliwia obecnie potwierdzenie samodzielności.
+- Brak
 
 ## Czas utknięcia
-Jeżeli jeden problem przekracza 2–3 h:
-- [ ] zapisałem hipotezę i wykonane kroki diagnostyczne
-- [ ] użyłem Tutora do diagnostyki
-- [ ] zdecydowałem: pogłębić teraz / wrócić później
+- Brak
 
 ## Wykorzystanie AI
 ### Inżynier
