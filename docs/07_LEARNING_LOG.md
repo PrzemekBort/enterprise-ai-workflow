@@ -9,6 +9,7 @@ Budowanie — co zrobiłem w projekcie:	Samodzielne powtórzenie ćwiczeń
 										restart - docker restart [nazwa]
 										stop - docker stop [nazwa]
 										Stan Up mówi o działającym kontenerze anie gotowosci jego składników wewnątrz
+										Git, .NET, Python i Docker były dostępne i odpowiedziały na polecenia wersji.
 										
 Problem / luka:							Nie
 Czy luka blokuje etap?					Nie
