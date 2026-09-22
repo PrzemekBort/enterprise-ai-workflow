@@ -25,12 +25,11 @@ Weryfikacja środowiska lokalnego, podstawowy przepływ pracy Git oraz uruchomie
 - Uruchomienie prostego kontenera oraz lokalnego PostgreSQL.
 
 ## Sprawdzenie wiedzy
-**Potrafię bez AI:**
-- Do zweryfikowania: wyjaśnienie różnicy między commitem, gałęzią i scaleniem.
-- Do zweryfikowania: samodzielna diagnostyka polecenia niedostępnego w `PATH`.
-
-**Jeszcze z pomocą:**
-- Do zweryfikowania: uruchomienie kontenera i połączenie z lokalnym PostgreSQL.
+Git: samodzielne użycie, poziom 3,
+Git, .NET, Python i Docker: dostępne,
+PostgreSQL w Dockerze: technicznie zweryfikowany przed i po restarcie,
+Docker/PostgreSQL: poziom 2, dalsza samodzielność jako carry-over,
+następny obszar pracy: HTTP/REST.
 
 ## Kryteria ukończenia
 - [x] Środowisko działa; Git i .NET są widoczne, a Python, Docker i PostgreSQL wymagają potwierdzenia lub konfiguracji.
