@@ -1,5 +1,28 @@
 # Dziennik nauki
 ---
+### 23.09.2026 E0S2
+Nauka — czego się dowiedziałem:			GET żadanie pobrania danych z serwera
+										POST wysyła żadanie na serwer, serwer może zwrócić różne wyniki w zależności od aktualnego stanu
+										2xx - żadanie poprawne
+										4xx - błąd w żadaniu
+										5xx - bład serwera
+
+Budowanie — co zrobiłem w projekcie:	Wywołanie żadania Invoke-WebRequest
+										-Uri adres URL, może zawierać w sobie parametry
+										-Method metoda
+										-ContentType "application/json" określa że dane przekazywane są w JSON
+										-Body ciało żadania, zawiera dane
+										GET /get?temat=http zwrócił 200 i args.temat
+										POST /post zwrócił 200: bez Content-Type dane znalazły się w form, natomiast z application/json w json
+
+										
+Problem / luka:							Nie
+Czy luka blokuje etap?					Nie
+Pomoc AI:								Pomoc przy pierwszych wywołaniach
+Co zrobiłem samodzielnie:				Kolejne wywołania
+Następny krok:		
+
+---
 ### 21.09.2026 E0S0
 Nauka — czego się dowiedziałem:			
 Budowanie — co zrobiłem w projekcie:	Samodzielne powtórzenie ćwiczeń

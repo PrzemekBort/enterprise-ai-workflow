@@ -1,5 +1,30 @@
 # Przeglądy v2
 
+# Zamknięcie Sprintu 01
+
+### Data: 2026-09-22
+
+## Realizacja
+- Sprint 01 został ukończony.
+- Środowisko lokalne działa: Git, .NET, Python i Docker są dostępne.
+- Samodzielnie wykonano przepływ Git: gałąź → commit → scalenie.
+- PostgreSQL uruchomiony w Dockerze odpowiedział na zapytanie przed i po restarcie kontenera.
+
+## Kompetencje i dowody
+- Git/GitHub: 3/5 — samodzielne użycie.
+- Docker: 2/5 — rozumienie i użycie z pomocą.
+- PostgreSQL: 2/5 — rozumienie i użycie z pomocą.
+
+## Zakres i carry-over
+- Nie rozszerzano zakresu poza ETAP 0.
+- Dalsza samodzielność Docker/PostgreSQL będzie utrwalana w naturalnej pracy z kontenerami, bez osobnego mechanicznego powtarzania laboratorium.
+
+## Decyzja
+- Pozostaję w ETAPIE 0.
+- Rozpoczynam Sprint 02 poświęcony HTTP/REST i przygotowaniu do przeglądu końcowego etapu.
+
+---
+
 # Przegląd tygodniowy
 
 ### Tydzień: YYYY-WXX
