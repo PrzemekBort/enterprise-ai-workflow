@@ -19,7 +19,7 @@ Nie podnoś poziomu tylko dlatego, że „przerobiłeś temat”.
 |---|---:|---|---|---|
 | Git/GitHub | 3 | samodzielny branch i merge | obługa konfliktów | samodzielne rozwiązanie prostego konfliktu albo dalsza praktyka w normalnej pracy |
 | Linux/bash |  |  |  |  |
-| HTTP/REST |  |  |  |  |
+| HTTP/REST | 3 | samodzielne GET i POST; interpretacja statusu, nagłówków, body oraz form/JSON | projektowanie zasobów API w V1 | dalsze użycie HTTP podczas budowy API |
 | C# |  |  |  |  |
 | ASP.NET Core |  |  |  |  |
 | Wstrzykiwanie zależności |  |  |  |  |

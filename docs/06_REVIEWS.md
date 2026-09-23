@@ -1,5 +1,35 @@
 # Przeglądy v2
 
+# Zamknięcie Sprintu 02 i przegląd ETAPU 0
+
+### Data: 2026-09-23
+
+## Dowody
+- GET `/get?temat=http` zwrócił `200`, a parametr `temat` był widoczny w `args`.
+- POST `/post` zwrócił `200`; bez nagłówka `Content-Type: application/json` dane były odczytane jako formularz, a z nim jako JSON.
+- Deweloper wskazał metodę, URL, nagłówki, body oraz wyjaśnił grupy kodów stanu, `201`, `404` i różnicę między HTTP a JSON.
+- Pierwsze żądania wykonano z pomocą AI, kolejne samodzielnie; dowód zapisano w `07_LEARNING_LOG.md` i przedstawiono w wynikach PowerShell.
+
+## Ocena Sprintu 02
+- Wszystkie kryteria Sprintu 02 są spełnione. Sprint zamknięto przed planowaną datą 2026-10-05.
+- HTTP/REST: 3/5 — samodzielne podstawowe użycie; brak dowodu na poziom 4 (diagnostyka typowych problemów).
+
+## Przegląd etapowy — ETAP 0
+- [x] Środowisko działa: Git, .NET, Python i Docker są dostępne, a PostgreSQL działa w kontenerze.
+- [x] Samodzielnie wykonano przepływ Git: gałąź → commit → scalenie.
+- [x] Kontener i PostgreSQL odpowiadały na zapytanie przed i po restarcie.
+- [x] Wykonano i wyjaśniono żądania HTTP GET i POST.
+- [x] Kryteria blokujące ETAPU 0 są spełnione.
+
+## Luki nieblokujące
+- Docker/PostgreSQL: poziom 2/5; większą samodzielność utrwalać w naturalnej pracy z projektem.
+- Git: konflikty, rebase i stash; podstawy Linux/bash — dalsza praktyka bez osobnego warunku przejścia.
+
+## Decyzja
+- ETAP 0 ukończony. Następny krok: zaplanowanie Sprintu 03 w ETAPIE 1 dla pierwszego, ograniczonego zakresu V1.
+
+---
+
 # Zamknięcie Sprintu 01
 
 ### Data: 2026-09-22

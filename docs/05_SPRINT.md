@@ -1,7 +1,7 @@
 # Bieżący sprint v2
 
 ## Sprint
-Sprint 02
+Sprint 02 — ukończony 2026-09-23
 
 ## Daty
 Początek: 2026-09-22
@@ -24,21 +24,21 @@ Praktycznie zrozumieć podstawy HTTP/REST, wykonać i zinterpretować żądania 
 ## Budowanie — maks. 3 rezultaty
 1. [x] Wykonano żądanie GET do testowego API i rozpoznano elementy żądania oraz odpowiedzi.
 2. [x] Wykonano żądanie z JSON, odczytano status, nagłówki i body oraz wyjaśniono wynik.
-3. [ ] Dowody zapisano w `07_LEARNING_LOG.md` i przeprowadzono przegląd końcowy ETAPU 0.
+3. [x] Dowody zapisano w `07_LEARNING_LOG.md` i przeprowadzono przegląd końcowy ETAPU 0.
 
 ## Sprawdzenie wiedzy
-- [ ] Potrafię własnymi słowami wyjaśnić różnicę między żądaniem a odpowiedzią.
-- [ ] Potrafię przewidzieć typowe zastosowanie metod GET i POST.
-- [ ] Potrafię wyjaśnić znaczenie otrzymanych kodów stanu i ich grup.
-- [ ] Potrafię odróżnić protokół HTTP od formatu danych JSON.
-- [ ] Potrafię samodzielnie wykonać proste żądanie bez komendy podanej przez AI.
+- [x] Potrafię własnymi słowami wyjaśnić różnicę między żądaniem a odpowiedzią.
+- [x] Potrafię przewidzieć typowe zastosowanie metod GET i POST.
+- [x] Potrafię wyjaśnić znaczenie otrzymanych kodów stanu i ich grup.
+- [x] Potrafię odróżnić protokół HTTP od formatu danych JSON.
+- [x] Potrafię samodzielnie wykonać proste żądanie bez komendy podanej przez AI.
 
 ## Kryteria ukończenia sprintu
-- [ ] Testowe żądania kończą się czytelną odpowiedzią.
-- [ ] Potrafię wskazać metodę, URL, status, nagłówki i body.
-- [ ] Potrafię własnymi słowami wyjaśnić wynik żądania.
-- [ ] W `07_LEARNING_LOG.md` istnieje praktyczny dowód wykonania ćwiczenia.
-- [ ] Przeprowadzono przegląd kryteriów ukończenia ETAPU 0.
+- [x] Testowe żądania kończą się czytelną odpowiedzią.
+- [x] Potrafię wskazać metodę, URL, status, nagłówki i body.
+- [x] Potrafię własnymi słowami wyjaśnić wynik żądania.
+- [x] W `07_LEARNING_LOG.md` istnieje praktyczny dowód wykonania ćwiczenia.
+- [x] Przeprowadzono przegląd kryteriów ukończenia ETAPU 0.
 
 ## Carry-over ze Sprintu 01
 - Docker/PostgreSQL: dalsza samodzielność utrwalana przy okazji naturalnej pracy z kontenerami, bez osobnego mechanicznego powtarzania laboratorium.
@@ -73,16 +73,21 @@ Jeżeli jeden problem przekracza 2–3 h:
 
 # Retrospektywa
 ## Dowiezione
-- Do uzupełnienia po zakończeniu sprintu.
+- Wykonałem proste żadania GET i POST, dane były przekazywane też w JSON
 
 ## Czego się nauczyłem
-- Do uzupełnienia po zakończeniu sprintu.
+- Jak wykonać żadanie
+- Kody statusów
+- Różnica między GET a POST
+- Do czego słuzy ContentType
+- Sposób przekazania danych
 
 ## Co nadal umiem tylko z pomocą
-- Do uzupełnienia po zakończeniu sprintu.
+- W tym sprincie nie stwierdzono blokującej luki w HTTP/REST. Docker i PostgreSQL pozostają na poziomie 2/5 i wymagają dalszej samodzielnej praktyki.
 
 ## Rozszerzanie zakresu
-- Do uzupełnienia po zakończeniu sprintu.
+- Brak
 
 ## Co przechodzi dalej
-- Do uzupełnienia po zakończeniu sprintu.
+- Samodzielna diagnostyka Docker/PostgreSQL w naturalnej pracy z projektem.
+- Git: rozwiązywanie konfliktów, rebase i stash oraz podstawy Linux/bash — luki nieblokujące do dalszej praktyki.

@@ -1,24 +1,22 @@
 # Bieżące postępy v2
 
 ## Bieżący etap
-ETAP 0 — Środowisko i fundamenty
+ETAP 0 — Środowisko i fundamenty, ukończony 2026-09-23
 
 ## Bieżąca wersja projektu
 V0 / konfiguracja — repozytorium dokumentacyjne, bez aplikacji i testów
 
 ## Bieżący sprint
-Sprint 02 — HTTP/REST i domknięcie ETAPU 0
+Sprint 02 — ukończony 2026-09-23
 
 ## Bieżący obszar pracy
-HTTP/REST i praktyczne żądania do testowego API; przygotowanie do przeglądu końcowego ETAPU 0.
+Planowanie ETAPU 1 i zakresu pierwszej wersji API Wniosków. Implementacja V1 jeszcze się nie rozpoczęła.
 
 ## Nauka
 **Ukończone:**
 - Git: gałąź, commit i scalanie.
 - Podstawy terminala oraz diagnozowanie dostępności poleceń w `PATH`.
 - Docker i lokalne uruchamianie PostgreSQL.
-
-**W toku:**
 - HTTP: żądanie i odpowiedź.
 - Podstawowe metody i kody stanu.
 - REST i JSON na poziomie praktycznym.
@@ -29,8 +27,6 @@ HTTP/REST i praktyczne żądania do testowego API; przygotowanie do przeglądu k
 - Środowisko lokalne zostało zweryfikowane: Git, .NET, Python i Docker są dostępne.
 - Samodzielnie wykonano przepływ gałąź → commit → scalenie.
 - Uruchomiono kontener PostgreSQL, wykonano zapytanie przed i po restarcie oraz bezpiecznie zatrzymano kontener.
-
-**W toku:**
 - Wykonanie prostego żądania GET do testowego API.
 - Wykonanie żądania zawierającego JSON.
 - Interpretacja metody, URL, statusu, nagłówków i body odpowiedzi.
@@ -40,8 +36,7 @@ HTTP/REST i praktyczne żądania do testowego API; przygotowanie do przeglądu k
 - Git/GitHub: poziom 3 — samodzielne użycie.
 - Docker: poziom 2 — rozumienie i użycie z pomocą.
 - PostgreSQL: poziom 2 — rozumienie i użycie z pomocą.
-
-**Do sprawdzenia w Sprincie 02:**
+- HTTP/REST: poziom 3 — samodzielne podstawowe użycie.
 - Wyjaśnienie różnicy między żądaniem a odpowiedzią HTTP.
 - Rozpoznawanie zastosowania GET i POST oraz podstawowych grup kodów stanu.
 - Odróżnienie HTTP od JSON.
@@ -51,25 +46,21 @@ HTTP/REST i praktyczne żądania do testowego API; przygotowanie do przeglądu k
 - [x] Środowisko działa; Git, .NET, Python i Docker są dostępne, a PostgreSQL działa w kontenerze.
 - [x] Repozytorium ma poprawny, samodzielnie wykonany przepływ pracy gałąź → commit → scalenie.
 - [x] Docker działa, a PostgreSQL można uruchomić lokalnie i wykonać na nim proste zapytanie.
-- [ ] Wykonano proste żądanie HTTP do testowego API i wyjaśniono żądanie oraz odpowiedź.
-- [ ] Przeprowadzono przegląd końcowy i potwierdzono podstawowe operacje ETAPU 0 bez prowadzenia krok po kroku przez AI.
+- [x] Wykonano proste żądanie HTTP do testowego API i wyjaśniono żądanie oraz odpowiedź.
+- [x] Przeprowadzono przegląd końcowy i potwierdzono podstawowe operacje ETAPU 0 bez prowadzenia krok po kroku przez AI.
 
 ## Blokady
-- Brak blokady środowiskowej.
-- HTTP/REST pozostaje jedynym niezrealizowanym obszarem blokującym ukończenie ETAPU 0.
+- Brak
 
 ## Otwarte luki w wiedzy
 | Luka | Pewność 0–5 | Blokuje etap? | Powrót |
 |---|---:|---|---|
-| HTTP/REST: żądanie, odpowiedź, metody i kody stanu | do samooceny | Tak | Sprint 02 |
 | Samodzielna diagnostyka Docker/PostgreSQL bez instrukcji | 2 | Nie | Naturalna dalsza praktyka |
 
 ## Następne 3 kroki
-1. Własnymi słowami opisać przewidywany przebieg prostego żądania HTTP.
-2. Wykonać i zinterpretować żądanie GET oraz żądanie zawierające JSON.
-3. Zapisać dowód w dzienniku nauki i przeprowadzić przegląd końcowy ETAPU 0.
+1. Ustalić ograniczony zakres kolejnego sprintu w ETAPIE 1 na podstawie roadmapy i wymagań V1.
+2. Zaplanować pierwsze ćwiczenie C# / ASP.NET Core bez przedwczesnego projektowania całego systemu.
+3. Utrwalać diagnostykę Docker/PostgreSQL przy okazji naturalnej pracy z projektem.
 
 ## Bieżące ryzyka
-- Kopiowanie komend HTTP bez rozumienia ich elementów.
-- Rozpoczęcie ASP.NET Core lub V1 przed zamknięciem ETAPU 0.
-- Próba zapamiętania wszystkich kodów stanu zamiast opanowania podstawowych grup i najczęstszych przykładów.
+- Przedwczesne rozszerzenie V1 o mechanizmy późniejszych wersji.
